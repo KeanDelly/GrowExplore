@@ -15,15 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import RedirectView
-from django.conf import settings
-from django.conf.urls.static import static
+from . import views
 
 urlpatterns = [
+    path('', views.homepage, name="homepage"),
     path('admin/', admin.site.urls),
-    #Adds gardengame paths to the main project
-    path("gardengame/", include("gardengame.urls"),
-    #Redirects the base (initial) url to our app
-    path("", RedirectView.as_view(url='gardengame/', permanent=True)),
-    static()
+    path("register/", views.register_request, name="register"),
+    path("login", views.login_request, name="login")
 ]
