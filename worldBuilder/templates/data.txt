@@ -1,5 +1,0 @@
-i know this is extremely insecure so making a note of it here:
-
-superuser/admin
-name: owner
-pass: 12345
