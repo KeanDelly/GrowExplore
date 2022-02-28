@@ -1,8 +1,18 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPS to Map</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
 
-{% block content %}
+<div class = "parent">
+    <img src="{% static 'campus_logo_white.png' %}" alt="Logo" class = image3>
+</div>
 
-<h1>Hello user!!!!</h1>
+<img src="{% static 'log.png' %}" onclick="window.location.href='http://127.0.0.1:8000/login/'" alt="Log In" class="login">
 
-
-{% endblock %}
+</body>
+</html>
