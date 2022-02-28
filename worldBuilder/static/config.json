@@ -1,0 +1,171 @@
+{
+  "coordinates": [
+    {
+      "name": "Harrison Building",
+      "latitude": 50.737841,
+      "longitude": -3.532590
+    },
+    {
+      "name": "Amory Building",
+      "latitude": 50.736615,
+      "longitude": -3.531617
+    },
+    {
+      "name": "The Forum",
+      "latitude": 50.734996,
+      "longitude": -3.534190
+    },
+    {
+		"name":"Amory",
+		"latitude":50.73673,
+		"longitude":-3.53181
+	},
+	{
+		"name":"Business School Building One",
+		"latitude":50.73553,
+		"longitude":-3.53002
+	},
+	{
+		"name":"Cornwall House Swimming Pool",
+		"latitude":50.73456,
+		"longitude":-3.52938
+	},
+	{
+		"name":"Northcott Theatre",
+		"latitude":50.73581,
+		"longitude":-3.53533
+	},
+
+	{
+		"name":"Forum",
+		"latitude":50.73523,
+		"longitude":-3.53388
+	},
+	{
+		"name":"Geoffrey Pope",
+		"latitude":50.73668,
+		"longitude":-3.53514
+	},
+	{
+		"name":"Great Hall",
+		"latitude":50.73545,
+		"longitude":-3.53454
+	},
+	{
+		"name":"Harrison",
+		"latitude": 50.73767,
+		"longitude":-3.53266
+	},
+	{
+		"name":"Hatherly",
+		"latitude":50.73406,
+		"longitude":-3.53327
+	},
+	{
+		"name":"Henry Wellcome Building for Biocatalysis",
+		"latitude":50.73672,
+		"longitude":-3.53563
+	},
+	{
+		"name":"Innovation Two",
+		"latitude":50.73834,
+		"longitude":-3.53116
+	},
+	{
+		"name":"Innovation One | South West Institute of Technology",
+		"latitude":50.73802,
+		"longitude":-3.53056
+	},
+	{
+		"name":"Institute of Arab and Islamic Studies",
+		"latitude":50.73638,
+		"longitude":-3.53715
+	},
+	{
+		"name":"INTO International Study Centre",
+		"latitude":50.73609,
+		"longitude":-3.53374
+	},
+	{
+		"name":"Laver",
+		"latitude":50.73754,
+		"longitude":-3.53353
+	},
+	{
+		"name":"Library",
+		"latitude":50.73545,
+		"longitude":-3.53319
+	},
+	{
+		"name":"Living Systems",
+		"latitude":50.73694,
+		"longitude":-3.53474
+	},
+	{
+		"name":"Mary Harris Memorial Chapel",
+		"latitude":50.73353,
+		"longitude":-3.53477
+	},
+	{
+		"name":"Old Library",
+		"latitude":50.73328,
+		"longitude":-3.53409
+	},
+	{
+		"name":"Peter Chalk Centre",
+		"latitude":50.73640,
+		"longitude":-3.53597
+	},
+	{
+		"name":"Physics",
+		"latitude":50.73706,
+		"longitude":-3.53620
+	},
+	{
+		"name":"Queens",
+		"latitude":50.73414,
+		"longitude":-3.53483
+	},
+	{
+		"name":"Reed Hall",
+		"latitude":50.73548,
+		"longitude":-3.53755
+	},
+	{
+		"name":"Reed Mews Wellbeing Centre",
+		"latitude":50.73598,
+		"longitude":-3.53828
+	},
+
+	{
+		"name":"Sir Henry Wellcome Building for Mood Disorders Research",
+		"latitude":50.73335,
+		"longitude":-3.53623
+	},
+	{
+		"name":"Sports Park",
+		"latitude":50.73795,
+		"longitude":-3.53720
+	},
+	{
+		"name":"Streatham Court",
+		"latitude":50.73582,
+		"longitude":-3.53115
+	},
+	{
+		"name":"Student Health Centre",
+		"latitude":50.73579,
+		"longitude":-3.53804
+	},
+	{
+		"name":"Washington Singer",
+		"latitude":50.73317,
+		"longitude":-3.53651
+	},
+	{
+		"name":"Xfi",
+		"latitude":50.73597,
+		"longitude":-3.53012
+	}
+  ]
+}
