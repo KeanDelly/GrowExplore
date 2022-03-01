@@ -1,3 +1,13 @@
+h1 {
+    margin: auto;
+    top: 185px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -68,16 +78,20 @@ body {
     margin-left: 0%;
     top: 0;
     left: 0;
-
-
 }
 
 .image3 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  margin-top: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 0px;
+    z-index: 1;
 }
 
 
@@ -90,11 +104,12 @@ body {
     margin-top: 30px;
 }
 .shelf{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 50%;
+    z-index:0;
 
 }
 
@@ -104,7 +119,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:20%;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .button {
