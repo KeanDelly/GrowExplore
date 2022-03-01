@@ -1,9 +1,9 @@
 # Campus Builder
 
-#Prerequisites:
+Prerequisites:
 
 
-#Concept:
+Concept:
 
 
-#Walkthrough:
+Walkthrough:
