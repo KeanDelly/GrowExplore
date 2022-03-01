@@ -1,9 +1,10 @@
 h1 {
     margin: auto;
-    top: 185px;
+    top: 20%;
     left: 0;
     right: 0;
     text-align: center;
+    display: block;
     z-index: 1;
     position: absolute;
 }
@@ -45,14 +46,14 @@ body {
   text-align: center;
   font-family: 'Courier New';
   color: white;
-  font-size: 20px;
+  font-size: 70%;
 }
 
 .parent {
     position: relative;
     top: 15px;
     left: auto;
-    width: 35%;
+    width: 50%;
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
@@ -84,13 +85,12 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 70px;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    margin-top: 0px;
+    width: 70%;
+    margin-top: 10px;
     z-index: 1;
 }
 
@@ -101,7 +101,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:15%;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .shelf{
     display: block;
@@ -115,11 +115,13 @@ body {
 
 .login {
     display: block;
-    position: relative;
+     left: 0;
+     right: 0;
     margin-left: auto;
     margin-right: auto;
+    position: absolute;
     width:20%;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 .button {
