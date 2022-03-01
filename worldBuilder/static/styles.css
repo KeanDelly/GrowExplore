@@ -18,6 +18,16 @@ li a {
     text-decoration: none;
 
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #73a47c;
+  color: white;
+  font-family: 'Courier New';
+  text-align: left;
+}
 
 li a:hover {
 
@@ -82,7 +92,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  max-width: 100%;
+
 }
 
 .login {
@@ -97,4 +108,15 @@ body {
     background-size: cover;
     url('https://media.geeksforgeeks.org/wp-content/uploads/20190314004249/sample-image2.png');
 }
+
+a:link {
+    color: #367441;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #367441;
+    background-color: transparent;
+    text-decoration: none;
 
