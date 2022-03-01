@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPS to Map</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<ul>
+    <li><a class="active" href="http://127.0.0.1:8000/main/">Home</a></li>
+    <li><a href="http://127.0.0.1:8000/main/profile">Profile </a></li>
+    <li><a href="http://127.0.0.1:8000/">Logout </a></li>
+</ul>
+
+<div class = "parent">
+    <img src="{% static 'campus_logo_white.png' %}" alt="Logo" class = image3>
+    <!-- shelf currently not showing up, need help-->
+    <img src="{% static 'shelf.png' %}"  alt="shelf" class= shelf>
+</div>
+
+</body>
+</html>

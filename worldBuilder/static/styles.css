@@ -76,6 +76,13 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:15%;
+    margin-top: 30px;
+}
+.shelf{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .login {
