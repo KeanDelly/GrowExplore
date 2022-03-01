@@ -30,6 +30,14 @@ body {
     background-color: #d0fef2;
 }
 
+.header {
+  background-color: #d0fef2;
+  text-align: center;
+  font-family: 'Courier New';
+  color: white;
+  font-size: 20px;
+}
+
 .parent {
     position: relative;
     top: 15px;
@@ -69,6 +77,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  margin-top: 0px;
 }
 
 
@@ -82,8 +91,9 @@ body {
 }
 .shelf{
   display: block;
-  position: center top;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
   height: auto;
 
 }
@@ -93,7 +103,8 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width:40%;
+    width:20%;
+    margin-top: 30px;
 }
 
 .button {
