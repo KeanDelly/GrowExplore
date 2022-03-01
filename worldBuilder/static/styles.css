@@ -7,14 +7,6 @@ ul {
 
 }
 
-.logo-image{
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-top: -6px;
-}
-
 li {
     float: left;
 }
@@ -76,7 +68,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 90%;
 }
 
 
@@ -89,8 +81,8 @@ body {
     margin-top: 30px;
 }
 .shelf{
-  display: absolute;
-  position: top center;
+  display: block;
+  position: center top;
   width: 100%;
   height: auto;
 
@@ -101,7 +93,7 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width:15%;
+    width:40%;
 }
 
 .button {
