@@ -63,7 +63,7 @@ body {
 .image1 {
     display: block;
     position: relative;
-    width: 100%;
+    width: 80%;
     top: 0;
     left: 0;
     margin-left: auto;
@@ -82,7 +82,7 @@ body {
 }
 
 .image3 {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     text-align: center;
@@ -90,7 +90,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    margin-top: 10px;
     z-index: 1;
 }
 
@@ -101,7 +100,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:15%;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .shelf{
     display: block;
@@ -110,18 +109,15 @@ body {
     position: relative;
     width: 50%;
     z-index:0;
-
+    margin-top: 1%;
 }
 
 .login {
     display: block;
-     left: 0;
-     right: 0;
     margin-left: auto;
     margin-right: auto;
-    position: absolute;
+    position: relative;
     width:20%;
-    margin-top: 100px;
 }
 
 .button {
@@ -150,4 +146,5 @@ a:link {
     color: #367441;
     background-color: transparent;
     text-decoration: none;
+}
 
