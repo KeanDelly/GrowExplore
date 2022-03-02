@@ -1,3 +1,14 @@
+h1 {
+    margin: auto;
+    top: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -5,14 +16,6 @@ ul {
     overflow: hidden;
     background-color: #73a47c;
 
-}
-
-.logo-image{
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-top: -6px;
 }
 
 li {
@@ -38,11 +41,19 @@ body {
     background-color: #d0fef2;
 }
 
+.header {
+  background-color: #d0fef2;
+  text-align: center;
+  font-family: 'Courier New';
+  color: white;
+  font-size: 70%;
+}
+
 .parent {
     position: relative;
     top: 15px;
     left: auto;
-    width: 35%;
+    width: 50%;
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
@@ -52,7 +63,7 @@ body {
 .image1 {
     display: block;
     position: relative;
-    width: 100%;
+    width: 80%;
     top: 0;
     left: 0;
     margin-left: auto;
@@ -68,15 +79,18 @@ body {
     margin-left: 0%;
     top: 0;
     left: 0;
-
-
 }
 
 .image3 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    position: relative;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    z-index: 1;
 }
 
 
@@ -89,19 +103,21 @@ body {
     margin-top: 30px;
 }
 .shelf{
-  display: absolute;
-  position: top center;
-  width: 100%;
-  height: auto;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 50%;
+    z-index:0;
+    margin-top: 1px;
 }
 
 .login {
     display: block;
-    position: relative;
     margin-left: auto;
     margin-right: auto;
-    width:15%;
+    position: relative;
+    width:20%;
 }
 
 .button {
@@ -130,4 +146,5 @@ a:link {
     color: #367441;
     background-color: transparent;
     text-decoration: none;
+}
 
