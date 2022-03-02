@@ -14,6 +14,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    color: white;
     background-color: #73a47c;
 
 }
@@ -45,7 +46,7 @@ body {
   background-color: #d0fef2;
   text-align: center;
   font-family: 'Courier New';
-  color: white;
+  color: DimGray;
   font-size: 70%;
 }
 
@@ -112,6 +113,13 @@ body {
     margin-top: 1px;
 }
 
+p{
+     font-family: 'Courier New';
+     color: DimGray;
+     font-size: 100%;
+     font-weight: bold;
+}
+
 .login {
     display: block;
     margin-left: auto;
@@ -137,14 +145,16 @@ body {
 }
 
 a:link {
-    color: #367441;
+    color: white;
     background-color: transparent;
     text-decoration: none;
   }
 
   a:visited {
-    color: #367441;
+    color: white;
     background-color: transparent;
     text-decoration: none;
 }
+
+
 
