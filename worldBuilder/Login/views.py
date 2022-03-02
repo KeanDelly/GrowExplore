@@ -10,9 +10,6 @@ from django.contrib.auth.forms import AuthenticationForm
 def homepage(request):
 	return render(request, 'homepage.html')
 
-def mainPage(request):
-	return render(request, 'MainPage.html')
-
 def login_request(request):
 	if request.method == "POST":
 		form = AuthenticationForm(request, data=request.POST)
