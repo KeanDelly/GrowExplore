@@ -94,14 +94,9 @@ Our process documents are managed in the trello platform. The link to our projec
 
 trello link: [https://trello.com/b/0c2cYICv/kamban-board-group-software]
 
-We have also taken regular snapshots of the kanban board in trello to archive our progress. These are held in the repository below.
+We have also taken regular snapshots of the kanban board in trello to archive our progress.
 
-[./process-documents/Process Documentation](./process-documents/Process Documentation)
-
-Within process documents we have also included the meeting notes, agenda and minutes. These will be found in the repository below.
-
-[./process-documents/meeting-notes/](./process-documents/meeting-notes/)
-
+Within process documents we have also included the meeting notes, agenda and minutes. 
 
 ## Technical Documents:
 
@@ -111,12 +106,11 @@ github link: [https://github.com/KeanDelly/ADjangoApp]
 
 We have also include the versioned source code for archiving.
 
-[./technical-documents/](./technical-documents/)
-
 Technical documents are broken down into front end and back end etc.  
 
 ## Product Documents:
 
-The UI and design documents for the client have also been archived under the link below:
+The UI and design documents for the client have also been archived.
 
-[./product-documents/UI/](./product-documents/UI/)
+This includes a product overview for the client in addition to the presentation.
+
