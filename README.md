@@ -87,3 +87,36 @@ Our map page is one of our most complex pages and will be the default page once 
 5. Profile Page
 
 Our profile page will have access to all of the information we have about that user. It will also contain an area where users can look through the streaks they have earned by frequently visiting buildings. This also includes a shelf that contains all the plants for the buildings you have streaks with to encourage users to check in so as to grow their plant by achieving longer streaks.
+
+## Process Documents: 
+
+Our process documents are managed in the trello platform. The link to our project page is below. Ursula has added mattcollison2 to the board so it is visible.
+
+trello link: [https://trello.com/b/0c2cYICv/kamban-board-group-software]
+
+We have also taken regular snapshots of the kanban board in trello to archive our progress. These are held in the repository below.
+
+[./process-documents/Process Documentation](./process-documents/Process Documentation)
+
+Within process documents we have also included the meeting notes, agenda and minutes. These will be found in the repository below.
+
+[./process-documents/meeting-notes/](./process-documents/meeting-notes/)
+
+
+## Technical Documents:
+
+Our technical documents are primarily managed on the github system. The link to the project is below:
+
+github link: [https://github.com/KeanDelly/ADjangoApp]
+
+We have also include the versioned source code for archiving.
+
+[./technical-documents/](./technical-documents/)
+
+Technical documents are broken down into front end and back end etc.  
+
+## Product Documents:
+
+The UI and design documents for the client have also been archived under the link below:
+
+[./product-documents/UI/](./product-documents/UI/)
