@@ -1,5 +1,14 @@
 # Campus Builder
 
+## Group Members 
+
+1) Ursula Mennar
+2) Jan Orman
+3) Katie Hopkins
+4) Sam Judges
+5) Dean Kelly 
+6) Vidip Khattar
+
 ## Prerequisites
 
 1. Setting up Environment
