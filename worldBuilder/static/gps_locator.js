@@ -23,7 +23,7 @@ let getObj = function() {
     }
 }
 
-fetch("./static/config.json") //Loads JSON data into JavaScript program
+fetch("../static/config.json") //Loads JSON data into JavaScript program
     .then(function(resp) {
         return resp.json();
     })
@@ -113,7 +113,7 @@ function showPosition(position) {
         if (outputText.localeCompare("") === 0) {
             output.innerHTML = "You don't seem to be near any buildings, keep looking!"
         }else {
-            output.innerHTML = "You are at:" + outputText
+            output.innerHTML = "You have checked in at :" + outputText
         }
 
     } else { //Current coordinates are outside the bounds of the campus coordinates

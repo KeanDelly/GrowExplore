@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<ul>
+    <li><a class="active" href="http://127.0.0.1:8000/main/">Home</a></li>
+    <li><a href="http://127.0.0.1:8000/main/profile">Profile </a></li>
+    <li><a>{{ user_name }}</a></li>
+    <li><a href="http://127.0.0.1:8000/">Logout </a></li>
+</ul>
+<div class="parent">
+    <img src="{% static 'campus_logo_white.png' %}" alt="Logo" class = image3>
+</div>
+
+<div class="header">
+<h1>{{ user_name }}'s Profile </h1>
+</div>
+<img src="{% static 'shelf.png' %}"  alt="shelf" class= shelf>
+
+<div class = "footer">
+    <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+</div>
+
+</body>
+</html>

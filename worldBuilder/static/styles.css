@@ -1,10 +1,24 @@
+h1 {
+    margin: auto;
+    top: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    color: white;
     background-color: #73a47c;
+
 }
+
 li {
     float: left;
 }
@@ -28,11 +42,19 @@ body {
     background-color: #d0fef2;
 }
 
+.header {
+  background-color: #d0fef2;
+  text-align: center;
+  font-family: 'Courier New';
+  color: DimGray;
+  font-size: 70%;
+}
+
 .parent {
     position: relative;
     top: 15px;
     left: auto;
-    width: 35%;
+    width: 50%;
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
@@ -42,7 +64,7 @@ body {
 .image1 {
     display: block;
     position: relative;
-    width: 100%;
+    width: 80%;
     top: 0;
     left: 0;
     margin-left: auto;
@@ -58,9 +80,20 @@ body {
     margin-left: 0%;
     top: 0;
     left: 0;
-
-
 }
+
+.image3 {
+    position: relative;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    z-index: 1;
+}
+
 
 .checkin {
     display: block;
@@ -68,11 +101,60 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:15%;
+    margin-top: 30px;
+}
+.shelf{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 50%;
+    z-index:0;
+    margin-top: 1px;
 }
 
+p{
+     font-family: 'Courier New';
+     color: DimGray;
+     font-size: 100%;
+     font-weight: bold;
+}
+
+.login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width:20%;
+}
 
 .button {
     background-size: cover;
     url('https://media.geeksforgeeks.org/wp-content/uploads/20190314004249/sample-image2.png');
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #73a47c;
+  color: white;
+  font-family: 'Courier New';
+  text-align: left;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
 

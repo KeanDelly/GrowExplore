@@ -10,9 +10,6 @@ from django.contrib.auth.forms import AuthenticationForm
 def homepage(request):
 	return render(request, 'homepage.html')
 
-def mainPage(request):
-	return render(request, 'MainPage.html')
-
 def login_request(request):
 	if request.method == "POST":
 		form = AuthenticationForm(request, data=request.POST)
@@ -23,7 +20,7 @@ def login_request(request):
 			if user is not None:
 				login(request, user)
 				messages.info(request, f"You are now logged in as {username}.")
-				return redirect("mainPage")
+				return redirect("http://127.0.0.1:8000/main/")
 			else:
 				messages.error(request,"Invalid username or password.")
 		else:

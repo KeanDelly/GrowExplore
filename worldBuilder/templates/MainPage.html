@@ -3,33 +3,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GPS to Map</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">Profile</a></li>
-        <li><a href="#contact">Logout</a></li>
-    </ul>
 
+    <ul>
+        <li><a class="active" href="http://127.0.0.1:8000/main/">Home</a></li>
+        <li><a href="http://127.0.0.1:8000/main/profile">Profile </a></li>
+        <li><a href="http://127.0.0.1:8000/">Logout </a></li>
+    </ul>
 
     <div class = "parent">
         <img src="{% static 'GreenCampus.jpg' %}" alt="Campus" class = image1>
         <img src="{% static 'pin.png' %}" alt="Pointer" class = image2 id = "pointer">
     </div>
 
-
-
-
     <img src="{% static 'check_in.png' %}" onclick="getLocation()" alt="Check In" class="checkin">
 
-    <p id = output>
+
+    <p id = output class="output">
     </p>
 
+    <div class = "footer">
+        <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </div>
+
+
     <script src="{% static 'gps_locator.js' %}"></script>
-
-
 
 </body>
 </html>
