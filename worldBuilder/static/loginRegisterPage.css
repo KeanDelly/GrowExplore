@@ -1,12 +1,11 @@
 * {
     padding: 0px;
-    margin: 0px;
 }
 body {
-    background-color: green;
+    background-color: #d0fef2;
 }
 header {
-    background-color: lightgreen;
+    background-color: #73a47c;
     color: white;
     display: flex;
     align-items: center;
@@ -16,7 +15,7 @@ header {
 }
 h1 {
     letter-spacing: 1.5vw;
-    font-family: 'system-ui';
+    font-family: 'Courier New';
     text-transform: uppercase;
     text-align: center;
 }
@@ -33,8 +32,8 @@ main {
     width: 500px;
     padding: 40px;
     border-radius: 8px;
-    background-color: white;
-    font-family: 'system-ui';
+    background-color: #f0d794;
+    font-family: 'Courier New';
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
 }
 .form_div {
@@ -43,6 +42,10 @@ main {
 .form_div > label {
     letter-spacing: 3px;
     font-size: 1rem;
+    text-align: right;
+    display: inline-block;
+    float: none;
+    margin: auto;
 }
 .info_div {
     text-align: center;
@@ -53,6 +56,7 @@ main {
 }
 .field_class {
     width: 75%;
+    margin: auto;
     border-radius: 6px;
     border-style: solid;
     border-width: 1px;
@@ -60,27 +64,27 @@ main {
     text-indent: 6px;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-family: 'system-ui';
+    font-family: 'Courier New';
     font-size: 0.9rem;
     letter-spacing: 2px;
+    background-color: #f7e5b6;
 }
+
 .submit_class {
-    border-style: none;
-    border-radius: 5px;
-    background-color: #FFE6D4;
-    padding: 8px 20px;
-    font-family: 'system-ui';
-    text-transform: uppercase;
-    letter-spacing: .8px;
     display: block;
     margin: auto;
     margin-top: 10px;
-    box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
     cursor: pointer;
+}
+
+button{
+   border:none;
+   background-color:transparent;
+   outline:none;
 }
 footer {
     height: 10vh;
-    background-color: lightgreen;
+    background-color: #73a47c;
     color: white;
     display: flex;
     align-items: center;
@@ -89,11 +93,34 @@ footer {
 }
 footer > p {
     text-align: center;
-    font-family: 'system-ui';
+    font-family: 'Courier New';
     letter-spacing: 3px;
 }
 footer > p > a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+
+.acknowledgment {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #73a47c;
+  color: white;
+  font-family: 'Courier New';
+  text-align: left;
+}
+
+a:link {
+    color: dimgrey;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: dimgrey;
+    background-color: transparent;
+    text-decoration: none;
 }
