@@ -1,18 +1,32 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'loginRegisterPage.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+    </header>
+    <main>
+        <form id="login_form" class="form_class" action="/register/" method="POST">
+            <div class="form_div">
+                {% csrf_token %}
+                <label>Username:</label>
+                <input id="username" class="field_class" name="username" type="text" placeholder="Enter Username" autofocus>
+                <label>Email:</label>
+                <input id="email" class="field_class" name="email" type="text" placeholder="Enter Email">
+                <label>Password:</label>
+                <input id="password1" class="field_class" name="password1" type="password" placeholder="Enter Password">
+				<label>2nd Pass:</label>
+                <input id="password2" class="field_class" name="password2" type="password" placeholder="Enter Password 2nd time">
 
-{% block content %}
-
-{% load crispy_forms_tags %}
-
-<!--Register-->
-<div class="container py-5">
-	<h1>Register</h1>
-	<form method="POST">
-		{% csrf_token %}
-		{{ register_form|crispy }}
-		<button class="btn btn-primary" type="submit">Register</button>
-	</form>
-	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
-</div>
-
-{% endblock %}
+                <button class="submit_class" type="submit" form="login_form" onclick="">Register</button>
+            </div>
+            <div class="info_div">
+                <p>Already got an account? <a href="/login">login here</a></p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
