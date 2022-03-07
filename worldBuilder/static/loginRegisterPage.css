@@ -32,7 +32,7 @@ main {
     width: 500px;
     padding: 40px;
     border-radius: 8px;
-    background-color: #f0d794;
+    background-color: #fef2d0;
     font-family: 'Courier New';
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
 }
@@ -67,7 +67,7 @@ main {
     font-family: 'Courier New';
     font-size: 0.9rem;
     letter-spacing: 2px;
-    background-color: #f7e5b6;
+    background-color: #fff7e0;
 }
 
 .submit_class {
