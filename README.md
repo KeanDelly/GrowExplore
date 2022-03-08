@@ -27,7 +27,7 @@
 
 ```(env) $ python -m pip install Django``` 
 
-```(env) $ python -m pip django-crispy-forms```
+```(env) $ python -m pip install django-crispy-forms```
 
 This command fetches the django and django-crispy-forms packages from the Python Package Index (PyPI) using pip.
 
