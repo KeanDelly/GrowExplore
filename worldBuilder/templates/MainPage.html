@@ -9,12 +9,13 @@
   </head>
   <body>
     <ul>
-      <li><a class="active" href="http://127.0.0.1:8000/main/">Home</a></li>
-      <li><a href="http://127.0.0.1:8000/main/profile">Profile </a></li>
-      <li><a href="http://127.0.0.1:8000/">Logout </a></li>
+      <li><a class="active" href="/main/">Home</a></li>
+      <li><a href="/main/profile">Profile </a></li>
       {% if request.user.is_superuser %}
-      <li><a href="http://127.0.0.1:8000/main/buildingOfTheDay">BOTD </a></li>
+      <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
       {% endif %}
+       <li><a href="/">Logout </a></li>
+
     </ul>
 
     <div class="parent">
@@ -32,15 +33,14 @@
       onclick="getLocation()"
       alt="Check In"
       class="checkin"
-      
+
     />
 
-     <p> Building of the Day!
-    
+     <p>
+       Building of the Day!: <br>
       {% for building in building_list %} {% if today == building.date %}
-      {{building.building_name}} : {{building.building_desc}} {% endif %} {% endfor %}
+      {{building.building_name}}, Description: {{building.building_desc}}<br>{% endif %} {% endfor %}
     </p>
-
 
     <p id="output" class="output"></p>
 

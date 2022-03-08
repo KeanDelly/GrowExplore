@@ -3,6 +3,7 @@ import datetime
 from django import forms
 from django.forms import ModelForm
 from .models import buildingOfTheDay
+from django.db.models.fields import BLANK_CHOICE_DASH
 
 
 # Create your forms here.
@@ -41,7 +42,7 @@ class buildingForm(ModelForm):
                ('Student Health Centre', 'Student Health Centre'),
                ('Washington Singer', 'Washington Singer'),
                ('Xfi', 'Xfi')]
-    building_name = forms.ChoiceField(label="Building Name", choices=CHOICES, widget=forms.RadioSelect)
-    building_desc = forms.CharField(label="Description", max_length=200)
-    date = forms.DateField(initial=datetime.date.today)
+    building_name = forms.CharField(label="Building Name", widget=forms.Select(choices=BLANK_CHOICE_DASH+CHOICES, attrs={'placeholder': 'Select building'}))
+    building_desc = forms.CharField(label="Description", max_length=200, widget=forms.widgets.TextInput())
+    date = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}), initial=datetime.date.today)
     reward = forms.CharField(label="Daily Reward", max_length=200)

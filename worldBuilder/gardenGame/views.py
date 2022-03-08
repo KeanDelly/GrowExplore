@@ -36,6 +36,7 @@ def buildingOfTheDay(request):
             building_dates = BOTDModel.objects.filter(
                 date=form.cleaned_data['date'])
             if len(building_dates) != 0:
+
                 return HttpResponseRedirect('/main/buildingOfTheDay?submitted=False')
             form.save()
         return HttpResponseRedirect('/main/buildingOfTheDay?submitted=True')

@@ -9,24 +9,30 @@
   </head>
   <body>
     <ul>
-      <li><a class="active" href="http://127.0.0.1:8000/main/">Home</a></li>
-      <li><a href="http://127.0.0.1:8000/main/profile">Profile </a></li>
-      <li><a href="http://127.0.0.1:8000/">Logout </a></li>
+      <li><a class="active" href="/main/">Home</a></li>
+      <li><a href="/main/profile">Profile </a></li>
       <comment Is it supposed to be superuser or staff they are different/>
       {% if request.user.is_superuser %}
-      <li><a href="http://127.0.0.1:8000/main/buildingOfTheDay">BOTD </a></li>
+      <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
       {% endif %}
+      <li><a href="/">Logout </a></li>
     </ul>
 
-    {% if submitted == True %} Form was submitted <a style="color:dimgrey;" href="http://127.0.0.1:8000/main/buildingOfTheDay">Submit another one?</a>{% elif submitted == False %}
+    {% if submitted == True %} Form has been submitted <br> <a style="color:dimGrey;" href="/main/buildingOfTheDay">Submit another one?</a> {% elif submitted == False %}
 
+    <br>
     <form method="post">
-      {% csrf_token %} {{form}}
+      {% csrf_token %}
+       <table>
+      {{ form.as_table }}
+      </table>
+      <br>
       <button type="submit" id="save" name="save">Add Building</button>
     </form>
 
+
     {% endif %}
-    
+
     
     <div class="footer">
       <a target="_blank" href="https://icons8.com/icon/19190/potted-plant"
