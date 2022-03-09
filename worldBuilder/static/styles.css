@@ -23,6 +23,11 @@ li {
     float: left;
 }
 
+noHover a:hover {
+    pointer-events: none;
+}
+
+
 li a {
     display: block;
     color: white;
@@ -99,8 +104,14 @@ body {
 }
 
 .navLogo {
-    width: 110px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
     margin: auto;
+    top: 0;
+    overflow: hidden;
+    margin-top: -33px;
 }
 
 .centerNav {
