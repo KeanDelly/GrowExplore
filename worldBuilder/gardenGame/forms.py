@@ -42,7 +42,14 @@ class buildingForm(ModelForm):
                ('Student Health Centre', 'Student Health Centre'),
                ('Washington Singer', 'Washington Singer'),
                ('Xfi', 'Xfi')]
-    building_name = forms.CharField(label="Building Name", widget=forms.Select(choices=BLANK_CHOICE_DASH+CHOICES, attrs={'placeholder': 'Select building'}))
-    building_desc = forms.CharField(label="Description", max_length=200, widget=forms.widgets.TextInput())
+    REWARDS = [('birdbox.png', 'Bird Box'),
+               ('gardenfork.png','Garden Fork'),
+               ('rake.png', 'Rake'),
+               ('spade.png', 'Spade'),
+               ('wateringcan.png' , 'Watering Can'),
+               ('wellies.png', 'Wellies'),
+               ('wheelbarrow.png', "Wheel Barrow")]
+    building_name = forms.CharField(label="Building Name", widget=forms.Select(choices=BLANK_CHOICE_DASH+CHOICES))
+    building_desc = forms.CharField(label="Description", max_length=200, widget=forms.Textarea(attrs={'rows':3, 'cols':43}))
     date = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}), initial=datetime.date.today)
-    reward = forms.CharField(label="Daily Reward", max_length=200)
+    reward = forms.ImageField(label="Daily Reward",  widget=forms.Select(choices=BLANK_CHOICE_DASH+REWARDS))

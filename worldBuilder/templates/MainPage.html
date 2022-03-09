@@ -35,11 +35,12 @@
       class="checkin"
 
     />
-
      <p>
-       Building of the Day!: <br>
+      Building of the Day!:
       {% for building in building_list %} {% if today == building.date %}
-      {{building.building_name}}, Description: {{building.building_desc}}<br>{% endif %} {% endfor %}
+      {{building.building_name}}, Description: {{building.building_desc}} , Reward:
+       <!Need to fix this so it displays an image in profile>
+      {{building.reward}}<br>{% endif %} {% endfor %}
     </p>
 
     <p id="output" class="output"></p>
