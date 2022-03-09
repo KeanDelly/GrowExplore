@@ -8,13 +8,16 @@
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
   </head>
   <body>
+
     <ul>
       <li><a class="active" href="/main/">Home</a></li>
       <li><a href="/main/profile">Profile </a></li>
       {% if request.user.is_superuser %}
       <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
       {% endif %}
-       <li><a href="/">Logout </a></li>
+      <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+
+       <li style="float:right"><a href="/">Logout </a></li>
 
     </ul>
 
@@ -52,6 +55,8 @@
       icon by <a target="_blank" href="https://icons8.com">Icons8</a>
     </div>
 
+
     <script src="{% static 'gps_locator.js' %}"></script>
+
   </body>
 </html>

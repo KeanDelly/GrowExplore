@@ -105,7 +105,11 @@ function showPosition(position) {
             console.log(Math.sqrt(x*x + y*y))
             if (Math.sqrt(x*x + y*y)<0.1) {
 
-                outputText += " "+locations[i];
+                if (outputText.localeCompare("") === 0) {
+                    outputText += " "+locations[i];
+                } else {
+                    outputText += " & "+locations[i];
+                }
             }
 
         }
@@ -113,6 +117,7 @@ function showPosition(position) {
         if (outputText.localeCompare("") === 0) {
             output.innerHTML = "You don't seem to be near any buildings, keep looking!"
         }else {
+
             output.innerHTML = "You have checked in at :" + outputText
         }
 

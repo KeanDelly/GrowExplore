@@ -34,9 +34,13 @@ li a {
 }
 
 li a:hover {
-
     background-color: #367441;
 }
+
+noHover a:hover {
+    pointer-events: none;
+}
+
 
 body {
     background-color: #d0fef2;
@@ -94,6 +98,27 @@ body {
     z-index: 1;
 }
 
+.navLogo {
+    width: 110px;
+    margin: auto;
+}
+
+.centerNav {
+    float: none;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    pointer-events: none;
+
+
+.centerNav hover {
+    background-color: #ddd;
+    color: black;
+}
+
+}
 
 .checkin {
     display: block;
