@@ -27,9 +27,7 @@
 
 ```(env) $ python -m pip install Django``` 
 
-```(env) $ python -m pip django-crispy-forms```
-
-This command fetches the django and django-crispy-forms packages from the Python Package Index (PyPI) using pip.
+This command fetches the django package from the Python Package Index (PyPI) using pip.
 
 Using shell to navigate to the directory containing the `manage.py` file. We can then use the following command to run the app server
 

@@ -15,11 +15,6 @@
       "latitude": 50.734996,
       "longitude": -3.534190
     },
-    {
-		"name":"Amory",
-		"latitude":50.73673,
-		"longitude":-3.53181
-	},
 	{
 		"name":"Business School Building One",
 		"latitude":50.73553,
@@ -35,12 +30,6 @@
 		"latitude":50.73581,
 		"longitude":-3.53533
 	},
-
-	{
-		"name":"Forum",
-		"latitude":50.73523,
-		"longitude":-3.53388
-	},
 	{
 		"name":"Geoffrey Pope",
 		"latitude":50.73668,
@@ -50,11 +39,6 @@
 		"name":"Great Hall",
 		"latitude":50.73545,
 		"longitude":-3.53454
-	},
-	{
-		"name":"Harrison",
-		"latitude": 50.73767,
-		"longitude":-3.53266
 	},
 	{
 		"name":"Hatherly",
