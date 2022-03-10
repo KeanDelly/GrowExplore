@@ -23,7 +23,7 @@
 
 	If the activation was successful, then you’ll see the name of your virtual environment, (env), at the beginning of your command prompt. This means that your environment setup is complete.
 
-	Next Django, along with crispy forms, needs to be installed in order to run the application. Once you’ve created and activated your Python virtual environment, you can install Django into this dedicated development workspace using the following command:
+	Next Django needs to be installed in order to run the application. Once you’ve created and activated your Python virtual environment, you can install Django into this dedicated development workspace using the following command:
 
 ```(env) $ python -m pip install Django``` 
 
