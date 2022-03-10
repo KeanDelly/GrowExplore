@@ -20,5 +20,5 @@ class TestViews(TestCase):
         client = Client()
         response = client.get('/main/buildingOfTheDay/')
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'profile.html')
+        self.assertTemplateUsed(response, 'buildingOfTheDay.html')
 
