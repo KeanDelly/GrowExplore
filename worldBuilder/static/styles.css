@@ -9,6 +9,17 @@ h1 {
     position: absolute;
 }
 
+body {
+    background-color: #d0fef2;
+}
+
+p{
+    font-family: 'Courier New';
+    color: DimGray;
+    font-size: 100%;
+    font-weight: bold;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -16,17 +27,11 @@ ul {
     overflow: hidden;
     color: white;
     background-color: #73a47c;
-
 }
 
 li {
     float: left;
 }
-
-noHover a:hover {
-    pointer-events: none;
-}
-
 
 li a {
     display: block;
@@ -35,7 +40,6 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-
 }
 
 li a:hover {
@@ -46,17 +50,12 @@ noHover a:hover {
     pointer-events: none;
 }
 
-
-body {
-    background-color: #d0fef2;
-}
-
 .header {
-  background-color: #d0fef2;
-  text-align: center;
-  font-family: 'Courier New';
-  color: DimGray;
-  font-size: 70%;
+    background-color: #d0fef2;
+    text-align: center;
+    font-family: 'Courier New';
+    color: DimGray;
+    font-size: 70%;
 }
 
 .parent {
@@ -67,10 +66,9 @@ body {
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
-
 }
 
-.image1 {
+.map {
     display: block;
     position: relative;
     width: 80%;
@@ -81,9 +79,9 @@ body {
     border-style: solid;
     border-width: 5pt;
     border-color: #a76258;
-
 }
-.image2 {
+
+.pointer {
     position: absolute;
     width: 0;
     margin-left: 0%;
@@ -91,16 +89,12 @@ body {
     left: 0;
 }
 
-.image3 {
+.homeLogo {
     position: relative;
-    left: 0;
-    right: 0;
-    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    z-index: 1;
+    width: 50%;
 }
 
 .navLogo {
@@ -122,6 +116,7 @@ body {
     transform: translate(-50%, -50%);
     color: black;
     pointer-events: none;
+}
 
 
 .centerNav hover {
@@ -129,9 +124,7 @@ body {
     color: black;
 }
 
-}
-
-.checkin {
+.checkIn {
     display: block;
     position: relative;
     margin-left: auto;
@@ -139,21 +132,14 @@ body {
     width:15%;
     margin-top: 30px;
 }
+
 .shelf{
     display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     width: 50%;
-    z-index:0;
     margin-top: 1px;
-}
-
-p{
-     font-family: 'Courier New';
-     color: DimGray;
-     font-size: 100%;
-     font-weight: bold;
 }
 
 .login {
@@ -161,32 +147,27 @@ p{
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width:20%;
-}
-
-.button {
-    background-size: cover;
-    url('https://media.geeksforgeeks.org/wp-content/uploads/20190314004249/sample-image2.png');
+    width:15%;
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #73a47c;
-  color: white;
-  font-family: 'Courier New';
-  text-align: left;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #73a47c;
+    color: white;
+    font-family: 'Courier New';
+    text-align: left;
 }
 
 a:link {
     color: white;
     background-color: transparent;
     text-decoration: none;
-  }
+}
 
-  a:visited {
+a:visited {
     color: white;
     background-color: transparent;
     text-decoration: none;
@@ -196,10 +177,3 @@ table{
     font-family: 'Courier New';
     color: dimGrey;
 }
-
-
-
-
-
-
-

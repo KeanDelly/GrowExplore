@@ -1,9 +1,11 @@
 * {
     padding: 0px;
 }
+
 body {
     background-color: #d0fef2;
 }
+
 header {
     background-color: #73a47c;
     color: white;
@@ -13,12 +15,14 @@ header {
     height: 10vh;
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
 }
+
 h1 {
     letter-spacing: 1.5vw;
     font-family: 'Courier New';
     text-transform: uppercase;
     text-align: center;
 }
+
 main {
     display: flex;
     align-items: center;
@@ -28,6 +32,7 @@ main {
     background:;
     background-size: cover;
 }
+
 .form_class {
     width: 500px;
     padding: 40px;
@@ -36,9 +41,11 @@ main {
     font-family: 'Courier New';
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
 }
+
 .form_div {
     text-transform: uppercase;
 }
+
 .form_div > label {
     letter-spacing: 3px;
     font-size: 1rem;
@@ -47,13 +54,16 @@ main {
     float: none;
     margin: auto;
 }
+
 .info_div {
     text-align: center;
     margin-top: 20px;
 }
+
 .info_div {
     letter-spacing: 1px;
 }
+
 .field_class {
     width: 75%;
     margin: auto;
@@ -78,10 +88,11 @@ main {
 }
 
 button{
-   border:none;
-   background-color:transparent;
-   outline:none;
+    border:none;
+    background-color:transparent;
+    outline:none;
 }
+
 footer {
     height: 10vh;
     background-color: #73a47c;
@@ -91,11 +102,13 @@ footer {
     justify-content: center;
     box-shadow: -5px -5px 10px rgb(0,0,0,0.3);
 }
+
 footer > p {
     text-align: center;
     font-family: 'Courier New';
     letter-spacing: 3px;
 }
+
 footer > p > a {
     text-decoration: none;
     color: white;
@@ -103,23 +116,23 @@ footer > p > a {
 }
 
 .acknowledgment {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #73a47c;
-  color: white;
-  font-family: 'Courier New';
-  text-align: left;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #73a47c;
+    color: white;
+    font-family: 'Courier New';
+    text-align: left;
 }
 
 a:link {
     color: dimgrey;
     background-color: transparent;
     text-decoration: none;
-  }
+}
 
-  a:visited {
+a:visited {
     color: dimgrey;
     background-color: transparent;
     text-decoration: none;
