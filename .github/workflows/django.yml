@@ -29,4 +29,4 @@ jobs:
     - name: Run tests
       run: |
          python ./worldBuilder/manage.py test ./worldBuilder/gardenGame
-         run: python ./worldBuilder/manage.py test ./worldBuilder/Login
+         python ./worldBuilder/manage.py test ./worldBuilder/Login
