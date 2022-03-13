@@ -26,7 +26,5 @@ jobs:
         python -m pip install --upgrade pip
         find . -regex '.*requirements.txt$'
         pip install -r ./worldBuilder/requirements.txt
-    - name: Run migrations
-      run: python ./worldBuilder/manage.py migrate
     - name: Run tests
       run: python ./worldBuilder/manage.py test
