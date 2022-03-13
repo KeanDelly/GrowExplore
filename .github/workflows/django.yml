@@ -27,4 +27,6 @@ jobs:
         find . -regex '.*requirements.txt$'
         pip install -r ./worldBuilder/requirements.txt
     - name: Run tests
-      run: python ./worldBuilder/manage.py test ./worldBuilder/
+      run: |
+         python ./worldBuilder/manage.py test ./worldBuilder/gardenGame
+         run: python ./worldBuilder/manage.py test ./worldBuilder/Login
