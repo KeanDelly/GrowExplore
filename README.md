@@ -27,7 +27,7 @@
 
 ```(env) $ python -m pip install Django``` 
 
-``(env) $ python -m pip install Pillow``` 
+```(env) $ python -m pip install Pillow``` 
 
 This command fetches the django and pillow packages from the Python Package Index (PyPI) using pip.
 
