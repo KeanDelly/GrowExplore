@@ -1,0 +1,65 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"bdccf442-5f22-4d87-a4f5-51d0d30567d2\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/Login/tests.py\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Login/urls.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Login/urls.py\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/gardenGame/tests.py\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$/..\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\n  </component>\n  <component name=\"ProjectId\" id=\"25hEjh8jhanq4RrviU1lFnrHg9p\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/Login/tests\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Login/tests\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"bdccf442-5f22-4d87-a4f5-51d0d30567d2\" name=\"Changes\" comment=\"\" />\n      <created>1645971061938</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1645971061938</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1737e22426d8ac08f10b4a6611c20148fbaa0cda)
++++ b/.idea/workspace.xml	(date 1646066466585)
+@@ -4,10 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bdccf442-5f22-4d87-a4f5-51d0d30567d2" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/Login/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Login/urls.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/gardenGame/tests.py" beforeDir="false" />
++    <list default="true" id="bdccf442-5f22-4d87-a4f5-51d0d30567d2" name="Changes" comment="Removed /admin path from the login as it was redundent code&#10;Done URL tests for login and gardenGame (though not currently linked up)&#10;27/02/2022 14:58">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -21,6 +19,7 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="ProjectId" id="25hEjh8jhanq4RrviU1lFnrHg9p" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -47,6 +46,21 @@
+       <option name="presentableId" value="Default" />
+       <updated>1645971061938</updated>
+     </task>
++    <task id="LOCAL-00001" summary="Removed /admin path from the login as it was redundent code&#10;Done URL tests for login and gardenGame (though not currently linked up)&#10;27/02/2022 14:58">
++      <created>1645973886718</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1645973886718</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Removed /admin path from the login as it was redundent code&#10;Done URL tests for login and gardenGame (though not currently linked up)&#10;27/02/2022 14:58">
++      <created>1645973924497</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1645973924497</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -59,5 +73,10 @@
+         </entry>
+       </map>
+     </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Removed /admin path from the login as it was redundent code&#10;Done URL tests for login and gardenGame (though not currently linked up)&#10;27/02/2022 14:58" />
++    <option name="LAST_COMMIT_MESSAGE" value="Removed /admin path from the login as it was redundent code&#10;Done URL tests for login and gardenGame (though not currently linked up)&#10;27/02/2022 14:58" />
+   </component>
+ </project>
+\ No newline at end of file

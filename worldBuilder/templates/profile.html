@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<ul>
+    <li><a class="active" href="/main/">Home</a></li>
+    <li><a href="/main/profile">Profile </a></li>
+    {% if request.user.is_superuser %}
+    <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
+    {% endif %}
+    <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+    <li style="float:right"><a href="/">Logout </a></li>
+</ul>
+<div class="header">
+<h1>{{ user_name }}'s Profile </h1>
+</div>
+<img src="{% static 'shelf.png' %}"  alt="shelf" class= shelf>
+
+<div class = "footer">
+    <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+</div>
+
+</body>
+</html>

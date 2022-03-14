@@ -1,0 +1,139 @@
+* {
+    padding: 0px;
+}
+
+body {
+    background-color: #d0fef2;
+}
+
+header {
+    background-color: #73a47c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+}
+
+h1 {
+    letter-spacing: 1.5vw;
+    font-family: 'Courier New';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    background:;
+    background-size: cover;
+}
+
+.form_class {
+    width: 500px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: #fef2d0;
+    font-family: 'Courier New';
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+}
+
+.form_div {
+    text-transform: uppercase;
+}
+
+.form_div > label {
+    letter-spacing: 3px;
+    font-size: 1rem;
+    text-align: right;
+    display: inline-block;
+    float: none;
+    margin: auto;
+}
+
+.info_div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info_div {
+    letter-spacing: 1px;
+}
+
+.field_class {
+    width: 75%;
+    margin: auto;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px 0px;
+    text-indent: 6px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Courier New';
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    background-color: #fff7e0;
+}
+
+.submit_class {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button{
+    border:none;
+    background-color:transparent;
+    outline:none;
+}
+
+footer {
+    height: 10vh;
+    background-color: #73a47c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px -5px 10px rgb(0,0,0,0.3);
+}
+
+footer > p {
+    text-align: center;
+    font-family: 'Courier New';
+    letter-spacing: 3px;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.acknowledgment {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #73a47c;
+    color: white;
+    font-family: 'Courier New';
+    text-align: left;
+}
+
+a:link {
+    color: dimgrey;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: dimgrey;
+    background-color: transparent;
+    text-decoration: none;
+}

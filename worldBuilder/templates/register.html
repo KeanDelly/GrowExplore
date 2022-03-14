@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'loginRegisterPage.css' %}">
+<link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+    </header>
+    <main>
+        <form id="login_form" class="form_class" action="/register/" method="POST">
+            <div class="form_div">
+                {% csrf_token %}
+                <label>Username:</label>
+                <input id="username" class="field_class" name="username" type="text" placeholder="Enter Username" autofocus>
+                <label>Email Address:</label>
+                <input id="email" class="field_class" name="email" type="text" placeholder="Enter Email Address">
+                <label>Password:</label>
+                <input id="password1" class="field_class" name="password1" type="password" placeholder="Enter Password">
+				<label>Confirm Password:</label>
+                <input id="password2" class="field_class" name="password2" type="password" placeholder="Enter Password Again">
+
+                <button class="submit_class" type="submit" form="login_form" onclick=""><input type="image" src="{% static 'register.png' %}" height="80" width="170"/></button>
+            </div>
+            <div class="info_div">
+                <p>Already got an account? <a href="/login">Login here</a></p>
+            </div>
+        </form>
+    </main>
+    <div class = "acknowledgment">
+        <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </div>
+</body>
+</html>

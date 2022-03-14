@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'loginRegisterPage.css' %}">
+<link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+    </header>
+    <main>
+        <form id="login_form" class="form_class" action="/login/" method="post">
+            <div class="form_div">
+                {% csrf_token %}
+                <label>Username:</label>
+                <input class="field_class" name="username" type="text" placeholder="Enter Username" autofocus>
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="password" type="password" placeholder="Enter Password">
+                <button class="submit_class" type="submit" form="login_form" onclick="return validarLogin()"><input type="image" src="{% static 'log.png' %}" height="80" width="170"/> </button>
+            </div>
+            <div class="info_div">
+                <p>Haven't got an account? <a href="/register">Create one here</a></p>
+            </div>
+        </form>
+    </main>
+    <div class = "acknowledgment">
+        <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </div>
+</body>
+</html>
