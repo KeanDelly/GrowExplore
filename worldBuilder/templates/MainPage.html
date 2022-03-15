@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static%}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8" />
     <title>Main Page</title>
@@ -34,17 +34,16 @@
       onclick="getLocation()"
       alt="Check In"
       class="checkIn"
-
     />
-     <p>
-      Building of the Day!:
-      {% for building in building_list %} {% if today == building.date %}
-      {{building.building_name}}, Description: {{building.building_desc}} , Reward:
-       <!Need to fix this so it displays an image in profile>
-      {{building.reward}}<br>{% endif %} {% endfor %}
-    </p>
 
     <p id="output" class="output"></p>
+
+    <p>
+      Building of the Day!:
+      {% for building in building_list %} {% if today == building.date %}{{building.name}} <br>Description: {{building.description}} <br> Reward:
+      </p>
+      <img style="width:10%;" src=/static/{{building.reward}} alt="Reward" class="Reward"> <br>
+      {% endif %} {% endfor %}
 
     <div class="footer">
       <a target="_blank" href="https://icons8.com/icon/19190/potted-plant"

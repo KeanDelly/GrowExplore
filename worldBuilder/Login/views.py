@@ -7,8 +7,14 @@ from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
 
+
 def homepage(request):
 	return render(request, 'homepage.html')
+
+
+def login_error(request):
+	return render(request, 'loginError.html')
+
 
 def login_request(request):
 	if request.method == "POST":
@@ -22,11 +28,14 @@ def login_request(request):
 				messages.info(request, f"You are now logged in as {username}.")
 				return redirect('/main/')
 			else:
-				messages.error(request,"Invalid username or password.")
+				messages.error(request, "Invalid username or password.")
+				return redirect('/loginError')
 		else:
-			messages.error(request,"Invalid username or password.")
+			messages.error(request, "Invalid username or password.")
+			return redirect('/loginError')
 	form = AuthenticationForm()
 	return render(request=request, template_name="login.html", context={"login_form":form})
+
 
 def register_request(request):
 	if request.method == "POST":

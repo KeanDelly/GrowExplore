@@ -19,7 +19,8 @@
        <li style="float:right"><a href="/">Logout </a></li>
     </ul>
 
-    {% if submitted == True %} Form has been submitted <br> <a style="color:dimGrey;" href="/main/buildingOfTheDay">Submit another one?</a> {% elif submitted == False %}
+    {% if submitted == True %}<p>Form has been submitted </p> <a style="color:#73a47c; font-weight: bold; font-family: 'Courier New'; Font" href="/main/buildingOfTheDay">Submit another one?</a>
+    {% elif submitted == False %}
 
     <br>
     <form method="post">

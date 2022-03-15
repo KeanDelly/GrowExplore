@@ -62,7 +62,7 @@ noHover a:hover {
     position: relative;
     top: 15px;
     left: auto;
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
@@ -71,7 +71,7 @@ noHover a:hover {
 .map {
     display: block;
     position: relative;
-    width: 80%;
+    width: 100%;
     top: 0;
     left: 0;
     margin-left: auto;
@@ -176,4 +176,10 @@ a:visited {
 table{
     font-family: 'Courier New';
     color: dimGrey;
+}
+
+Reward{
+    display: block;
+    position: relative;
+    width:15%;
 }
