@@ -9,19 +9,24 @@
   </head>
   <body>
     <ul>
-      <li><a class="active" href="http://127.0.0.1:8000/main/">Home</a></li>
-      <li><a href="http://127.0.0.1:8000/main/profile">Profile </a></li>
-      <li><a href="http://127.0.0.1:8000/">Logout </a></li>
+      <li><a class="active" href="/main/">Home</a></li>
+      <li><a href="/main/profile">Profile </a></li>
       {% if request.user.is_superuser %}
-      <li><a href="http://127.0.0.1:8000/main/buildingOfTheDay">BOTD </a></li>
+      <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
       {% endif %}
+      <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+       <li style="float:right"><a href="/">Logout </a></li>
     </ul>
 
-    {% if submitted == True %} Form was submitted <a style="color:blue;" href="http://127.0.0.1:8000/main/reportToAdmin">Submit another one?</a>{% elif submitted == False %}
+    {% if submitted == True %} <p>Form was submitted</p> <a style="color: dimGrey; font-family: 'Courier New';" href="/main/reportToAdmin">Submit another one?</a>{% elif submitted == False %}
 
     <form method="post">
-      {% csrf_token %} {{form.as_p}}
-      <button type="submit" id="save" name="save">Report Problem</button>
+      {% csrf_token %}
+       <table>
+      {{ form.as_table }}
+      </table>
+      <br>
+      <button type="submit" id="save" name="save" style="color: dimGrey; font-family: 'Courier New';">Submit Problem </button>
     </form>
 
     {% endif %}
@@ -29,8 +34,7 @@
     
     <div class="footer">
       <a target="_blank" href="https://icons8.com/icon/19190/potted-plant"
-        >Potted Plant</a
-      >
+        >Potted Plant</a>
       icon by <a target="_blank" href="https://icons8.com">Icons8</a>
     </div>
 

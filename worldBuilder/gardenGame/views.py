@@ -3,16 +3,16 @@ from pyexpat import model
 import re
 from ssl import AlertDescription
 from django.shortcuts import render
-from .forms import buildingForm, reportToAdminForm
+from forms import buildingForm, reportToAdminForm
 from django.http import HttpResponseRedirect
-from .models import buildingOfTheDay as BOTDModel, reportToAdmin
+from models import buildingOfTheDay as BOTDModel, reportToAdmin
 
 # Create your views here.
 
 
 def mainPage(request):
     building_list = BOTDModel.objects.all()
-    return render(request, 'MainPage.html', {'building_list': building_list , 'today': datetime.date.today})
+    return render(request, 'MainPage.html', {'building_list': building_list, 'today': datetime.date.today})
 
 
 def profile(request):
@@ -36,7 +36,7 @@ def buildingOfTheDay(request):
             building_dates = BOTDModel.objects.filter(
                 date=form.cleaned_data['date'])
             if len(building_dates) != 0:
-                print("ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                print("ERROR")
                 return HttpResponseRedirect('/main/buildingOfTheDay?submitted=False')
             form.save()
         return HttpResponseRedirect('/main/buildingOfTheDay?submitted=True')

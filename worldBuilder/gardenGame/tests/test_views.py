@@ -1,9 +1,8 @@
 from django.test import TestCase, Client
-##from django.urls import reverse
-##from budget.models import Project, Category, Expense
 import json
 
 class TestViews(TestCase):
+
     def test_mainPage_GET(self):
        client = Client()
        response = client.get('/main/')
@@ -21,4 +20,10 @@ class TestViews(TestCase):
         response = client.get('/main/buildingOfTheDay/')
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'buildingOfTheDay.html')
+
+    def test_reportToAdmin_GET(self):
+        client = Client()
+        response = client.get('/main/reportToAdmin/')
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'reportToAdmin.html')
 
