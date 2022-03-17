@@ -6,12 +6,11 @@ from django.shortcuts import render
 from .forms import buildingForm, reportToAdminForm
 from django.http import HttpResponseRedirect
 from .models import buildingOfTheDay as BOTDModel, reportToAdmin
-from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
-@login_required
+
 def mainPage(request):
     building_list = BOTDModel.objects.all()
     return render(request, 'MainPage.html', {'building_list': building_list, 'today': datetime.date.today})
@@ -19,7 +18,7 @@ def mainPage(request):
 def privacyPolicy(request):
     return render(request, 'privacyPage.html')
 
-@login_required
+
 def profile(request):
     args = {}
 
@@ -33,7 +32,7 @@ def profile(request):
     return render(request, 'profile.html', args)
 
 
-@login_required
+
 def buildingOfTheDay(request):
     submitted = False
     building_list = BOTDModel.objects.all()
@@ -54,7 +53,7 @@ def buildingOfTheDay(request):
     return render(request, 'buildingOfTheDay.html', {"form": form, 'submitted': submitted, 'building_list': building_list})
 
 
-@login_required
+
 def reportToAdmin(request):
     submitted = False
     if request.method == "POST":

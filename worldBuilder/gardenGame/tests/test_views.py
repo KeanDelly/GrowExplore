@@ -1,13 +1,13 @@
 from django.test import TestCase, Client
-import json
+
 
 class TestViews(TestCase):
 
     def test_mainPage_GET(self):
-       client = Client()
-       response = client.get('/main/')
-       self.assertEquals(response.status_code, 200)
-       self.assertTemplateUsed(response, 'MainPage.html')
+        client = Client()
+        response = client.get('/main/')
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'MainPage.html')
 
     def test_profilePage_GET(self):
         client = Client()
@@ -27,3 +27,8 @@ class TestViews(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'reportToAdmin.html')
 
+    def test_privacyPolicy_GET(self):
+        client = Client()
+        response = client.get('/main/privacyPolicy/')
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'privacyPage.html')

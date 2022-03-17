@@ -183,3 +183,9 @@ Reward{
     position: relative;
     width:15%;
 }
+
+.font{
+    font-family: 'Courier New';
+    color: dimGrey;
+    font-weight: bold;
+}

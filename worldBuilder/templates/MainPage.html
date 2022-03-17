@@ -45,15 +45,19 @@
       <img style="width:10%;" src=/static/{{building.reward}} alt="Reward" class="Reward"> <br>
       {% endif %} {% endfor %}
 
+    <br>
+    <br>
+
     <div class="footer">
       <a target="_blank" href="https://icons8.com/icon/19190/potted-plant"
         >Potted Plant</a
-      >icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-      <a style="float:centre" href="/main/privacyPolicy">Privacy Policy</a>
+      >icon by <a target="_blank" href="https://icons8.com">Icons8  </a>
+      <a style="float:right" href="/main/privacyPolicy">|  Privacy Policy  |</a>
       {% if request.user.is_superuser == False %}
-      <a style="float:right" href="/main/reportToAdmin">Report to Admin</a>
+      <a style="float:right" href="/main/reportToAdmin">|  Report to Admin  |</a>
       {% endif %}
     </div>
+
 
 
     <script src="{% static 'gps_locator.js' %}"></script>
