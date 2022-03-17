@@ -1,6 +1,6 @@
 from django.test import TestCase
 import sys
-sys.path.insert(0, '/worldBuilder/gardenGame/')
+sys.path.insert(0, '/worldBuilder/gardenGame/forms/')
 from forms import buildingForm
 
 class TestForms(TestCase):

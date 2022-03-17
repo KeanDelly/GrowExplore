@@ -16,6 +16,8 @@ def mainPage(request):
     building_list = BOTDModel.objects.all()
     return render(request, 'MainPage.html', {'building_list': building_list, 'today': datetime.date.today})
 
+def privacyPolicy(request):
+    return render(request, 'privacyPage.html')
 
 @login_required
 def profile(request):

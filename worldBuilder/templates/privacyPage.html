@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static%}
+    <meta charset="UTF-8">
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+	<link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
+</head>
+<body>
+
+
+	<ul>
+      <li><a class="active" href="/main/">Home</a></li>
+      <li><a href="/main/profile">Profile </a></li>
+      <! Is it supposed to be superuser or staff they are different>
+      {% if request.user.is_superuser %}
+      <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
+      {% endif %}
+     <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+       <li style="float:right"><a href="/">Logout </a></li>
+    </ul>
+	<p>
+		<br>
+		Campus Builder Privacy Policy
+		<br>
+		<br>
+		Our contact details:
+
+		<ol>
+			<li>Name: Dean, Ursula, Katie, Jan, Sam, Vidip</li>
+			<br>
+			<li>E-mail: um216@exeter.ac.uk</li>
+		</ol>
+		<br>
+		We currently collect and process the following information:
+		<ol>
+			<li>Usernames</li>
+			<br>
+			<li>Emails</li>
+			<br>
+			<li>Passwords</li>
+			<br>
+			<li>Location data, temporarily</li>
+		</ol>
+		<br>
+		How we get the personal information and why we have it:
+		<br>
+		<br>
+		Most of the personal information we process is provided to us directly by you for one of the following reasons:
+		<br>
+		<br>
+		Account creation, consists of usernames, passwords and emails
+		<br>
+		Using the app consists of using your location data to play
+		<br>
+		<br>
+
+		We use the information that you have given us in order to allow users to maintain their progress in the game and to facilite playing the game itself.
+		<br>
+		<br>
+		<br>
+		Under the General Data Protection Regulation (GDPR), the lawful bases we rely on for processing this information are:
+		<br>
+
+		<ol>
+			<li>Your consent. You are able to remove your consent at any time. You can do this by contacting um216@exeter.ac.uk</li>
+			<br>
+			<li>We have a contractual obligation. </li>
+			<br>
+			<li>We have a legal obligation.</li>
+			<br>
+			<li>We have a vital interest. </li>
+			<br>
+			<li>We need it to perform a public task.</li>
+			<br>
+			<li>We have a legitimate interest.</li>
+		</ol>
+		<br>
+		How we store your personal information:
+		<br>
+		Your information is securely stored.
+		<br>
+		We store usernames, emails and passwords, with the passwords being salted and hashed in addition we store it in a secure database
+		<br>
+
+
+
+
+		Your data protection rights:
+		<br>
+		Under data protection law, you have rights including:
+
+
+		<ol>
+			<li>Your right of access - You have the right to ask us for copies of your personal information.</li>
+			<br>
+			<li>Your right to rectification - You have the right to ask us to rectify personal information you think is inaccurate. You also have the right to ask us to complete information you think is incomplete.  </li>
+			<br>
+			<li>Your right to erasure - You have the right to ask us to erase your personal information in certain circumstances.  </li>
+			<br>
+			<li>Your right to restriction of processing - You have the right to ask us to restrict the processing of your personal information in certain circumstances.  </li>
+			<br>
+			<li>Your right to object to processing - You have the the right to object to the processing of your personal information in certain circumstances. </li>
+			<br>
+			<li>Your right to data portability - You have the right to ask that we transfer the personal information you gave us to another organisation, or to you, in certain circumstances. </li>
+		</ol>
+		<br>
+		<br>
+		You are not required to pay any charge for exercising your rights. If you make a request, we have one month to respond to you.
+		<br>
+		Please contact us at um216@exeter.ac.uk if you wish to make a request.
+
+		<br>
+		<br>
+		<br>
+		How to complain:
+		<br>
+		If you have any concerns about our use of your personal information, you can make a complaint to us at um216@exeter.ac.uk.
+		<br>
+		You can also complain to the ICO if you are unhappy with how we have used your data.
+		<br>
+		The ICO’s address:
+		<br>
+		Information Commissioner’s Office
+		<br>
+		Wycliffe House, Water Lane
+		<br>
+		Wilmslow, Cheshire
+		<br>
+		SK9 5AF
+		<br>
+
+
+		Helpline number: 0303 123 1113
+		<br>
+		ICO website: https://www.ico.org.uk
+
+		<br>
+		<br>
+
+	</p>
+	 <div class="footer">
+      <a target="_blank" href="https://icons8.com/icon/19190/potted-plant"
+        >Potted Plant</a>
+      icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </div>
+
+</body>
+</html>
