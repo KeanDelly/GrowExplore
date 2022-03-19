@@ -2,7 +2,7 @@ from dataclasses import field
 import datetime
 from django import forms
 from django.forms import ModelForm
-from .models import buildingOfTheDay, reportToAdmin
+from gardenGame.models import buildingOfTheDay, reportToAdmin
 from django.db.models.fields import BLANK_CHOICE_DASH
 
 CHOICES = [('Harrison Building', 'Harrison Building'),

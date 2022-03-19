@@ -1,5 +1,5 @@
 from django.test import TestCase
-from ..models import buildingOfTheDay
+from gardenGame.models import buildingOfTheDay
 
 
 class TestModels(TestCase):
@@ -11,18 +11,20 @@ class TestModels(TestCase):
 
     def test_building_name_label(self):
         building = buildingOfTheDay.objects.get(id=1)
-        field_label = building._meta.get_field('building_name').verbose_name
-        self.assertEqual(field_label, 'Building Name')
+        field_label = building._meta.get_field('name').verbose_name
+        self.assertEqual(field_label, 'name')
+
+
 
     def test_building_description_label(self):
         building = buildingOfTheDay.objects.get(id=1)
-        field_label = building._meta.get_field('building_desc').verbose_name
-        self.assertEqual(field_label, 'Building Description')
+        field_label = building._meta.get_field('description').verbose_name
+        self.assertEqual(field_label, 'description')
 
     def test_date_label(self):
         building = buildingOfTheDay.objects.get(id=1)
         field_label = building._meta.get_field('date').verbose_name
-        self.assertEqual(field_label, 'Date')
+        self.assertEqual(field_label, 'date')
 
     def test_reward_label(self):
         building = buildingOfTheDay.objects.get(id=1)
