@@ -148,5 +148,5 @@ EMAIL_USE_TLS = True
 #EMAIL_HOST_USER = "worldbuilderexeter@gmail.com"
 #EMAIL_HOST_PASSWORD = 'k8ca4De3d7J7gJvf'
 
-EMAIL_HOST_USER = "vidipkhattar7@gmail.com"
-EMAIL_HOST_PASSWORD = 'messages2'
+EMAIL_HOST_USER = "campusbuilderreset@gmail.com"
+EMAIL_HOST_PASSWORD = 'Google321'
