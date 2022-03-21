@@ -71,6 +71,7 @@ def password_reset_request(request):
 					c = {
 					"email":user.email,
 					#Need to change, put domain name into config file
+					#'domain':'exebuildergame2.nw.r.appspot.com',
 					'domain':'127.0.0.1:8000',
 					'site_name': 'Website',
 					"uid": urlsafe_base64_encode(force_bytes(user.pk)),
