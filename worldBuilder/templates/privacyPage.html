@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 {% load static%}
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}"/>
 	<link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
@@ -17,7 +17,7 @@
       {% if request.user.is_superuser %}
       <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
       {% endif %}
-     <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+     <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="Campus Builder"></a></li>
        <li style="float:right"><a href="/">Logout </a></li>
     </ul>
 	<div class="font">

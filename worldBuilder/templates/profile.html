@@ -2,7 +2,7 @@
 {% load static%}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
@@ -15,14 +15,14 @@
     {% if request.user.is_superuser %}
     <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
     {% endif %}
-    <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+    <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="Campus Builder"></a></li>
     <li style="float:right"><a href="/">Logout </a></li>
 </ul>
 <div class="header">
 <h1>{{ user_name }}'s Profile </h1>
 </div>
-<div class ="shelfParent">
 
+<div class ="shelfParent">
     <img src="{% static 'big_shelf.png' %}"  alt="shelf" class= shelf>
 </div>
 
@@ -55,7 +55,8 @@
         <p style="transform: translate(0, 960%)">Amory Building</p>
     </div>
 </div>
-
+<br>
+ <img src="{% static 'shed.png' %}"  alt="shed" class= shed>
 
 
 <div class = "footer">

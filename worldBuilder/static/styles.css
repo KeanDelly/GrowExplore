@@ -62,10 +62,12 @@ noHover a:hover {
     position: relative;
     top: 15px;
     left: auto;
-    width: 70%;
+    width: 90%;
+    max-width: 800px;
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
+
 }
 
 .map {
@@ -98,22 +100,15 @@ noHover a:hover {
 }
 
 .navLogo {
+  height: 25px;
     position: relative;
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
-    margin: auto;
-    top: 0;
-    overflow: hidden;
-    margin-top: -33px;
 }
 
 .centerNav {
-    float: none;
+   float: none;
     position: absolute;
-    top: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -7%);
     color: black;
     pointer-events: none;
 }
@@ -129,7 +124,8 @@ noHover a:hover {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width:15%;
+    width: 50%;
+    max-width: 250px;
     margin-top: 30px;
 }
 
@@ -142,12 +138,21 @@ noHover a:hover {
     margin-top: 1px;
 }
 
+.shed{
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+     position: relative;
+     margin: 200px auto;
+}
+
 .login {
     display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width:15%;
+    width: 40%;
 }
 
 .footer {
@@ -159,6 +164,7 @@ noHover a:hover {
     color: white;
     font-family: 'Courier New';
     text-align: left;
+    font-size: 15px;
 }
 .shelfParent {
     position: absolute;

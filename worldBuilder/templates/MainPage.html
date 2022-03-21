@@ -2,7 +2,8 @@
 {% load static%}
 <html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Main Page</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
@@ -15,12 +16,12 @@
       {% if request.user.is_superuser %}
       <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
       {% endif %}
-      <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+      <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="Campus Builder"></a></li>
        <li style="float:right"><a href="/">Logout </a></li>
     </ul>
 
     <div class="parent">
-      <img src="{% static 'GreenCampus.jpg' %}" alt="Campus" class="map" />
+      <img src="{% static 'GreenCampus.jpg' %}" alt="Campus Map" class="map" />
       <img
         src="{% static 'pin.png' %}"
         alt="Pointer"
@@ -32,7 +33,7 @@
     <img
       src="{% static 'check_in.png' %}"
       onclick="getLocation()"
-      alt="Check In"
+      alt="Check In Location Pin"
       class="checkIn"
     />
 
@@ -42,7 +43,7 @@
       Building of the Day!:
       {% for building in building_list %} {% if today == building.date %}{{building.name}} <br>Description: {{building.description}} <br> Reward:
       </p>
-      <img style="width:10%;" src=/static/{{building.reward}} alt="Reward" class="Reward"> <br>
+      <img style="width:10%;" src=/static/{{building.reward}} alt="{{building.reward}}" class="Reward"> <br>
       {% endif %} {% endfor %}
 
     <br>
@@ -52,9 +53,9 @@
       <a target="_blank" href="https://icons8.com/icon/19190/potted-plant"
         >Potted Plant</a
       >icon by <a target="_blank" href="https://icons8.com">Icons8  </a>
-      <a style="float:right" href="/main/privacyPolicy">|  Privacy Policy  |</a>
+      <a style="float:right" href="/main/privacyPolicy">Privacy Policy &nbsp</a>
       {% if request.user.is_superuser == False %}
-      <a style="float:right" href="/main/reportToAdmin">|  Report to Admin  |</a>
+      <a style="float:right" href="/main/reportToAdmin">Report to Admin &nbsp</a>
       {% endif %}
     </div>
 
