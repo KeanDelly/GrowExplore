@@ -2,7 +2,7 @@
 {% load static%}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
@@ -15,16 +15,56 @@
     {% if request.user.is_superuser %}
     <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
     {% endif %}
-    <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+    <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="Campus Builder"></a></li>
     <li style="float:right"><a href="/">Logout </a></li>
 </ul>
 <div class="header">
 <h1>{{ user_name }}'s Profile </h1>
 </div>
-<img src="{% static 'shelf.png' %}"  alt="shelf" class= shelf>
+
+<div class ="shelfParent">
+    <img src="{% static 'big_shelf.png' %}"  alt="shelf" class= shelf>
+</div>
+
+<div class="profileDisplay">
+
+    <p class="profileOutput" id="profilePlants">
+        <img class="firstRow" src="{% static 'plants/red2.png' %}"  alt="plant">
+        <img class="firstRow" src="{% static 'plants/blue1.png' %}"  alt="plant">
+        <img class="firstRow" src="{% static 'plants/green3.png' %}"  alt="plant">
+        <br>
+        <img class="secondRow" src="{% static 'plants/green1.png' %}"  alt="plant">
+        <img class="secondRow" src="{% static 'plants/yellow2.png' %}"  alt="plant">
+        <img class="secondRow" src="{% static 'plants/pink1.png' %}"  alt="plant">
+        <br>
+        <img class="thirdRow" src="{% static 'plants/red1.png' %}"  alt="plant">
+        <img class="thirdRow" src="{% static 'plants/pink2.png' %}"  alt="plant">
+        <img class="thirdRow" src="{% static 'plants/pink3.png' %}"  alt="plant">
+    </p>
+    <div class="profileText" style="transform: translate(0, 30%)" id="profileText">
+        <p style="transform: translate(0, -60%)">Harrison Building</p>
+        <p style="transform: translate(0, -60%)">Business School</p>
+        <p style="transform: translate(0, -60%)">Northcott Theatre</p>
+        <br>
+        <p style="transform: translate(0, 460%)">The Forum</p>
+        <p style="transform: translate(0, 460%)">Great Hall</p>
+        <p style="transform: translate(0, 460%)">Peter Chalk</p>
+        <br>
+        <p style="transform: translate(0, 960%)">Streatham Court</p>
+        <p style="transform: translate(0, 960%)">Geoffrey Pope</p>
+        <p style="transform: translate(0, 960%)">Amory Building</p>
+    </div>
+</div>
+<br>
+ <img src="{% static 'shed.png' %}"  alt="shed" class= shed>
+
 
 <div class = "footer">
     <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <a style="float:right" href="/main/privacyPolicy">Privacy Policy</a>
+     {% if request.user.is_superuser == False %}
+      <a style="float:right" href="/main/reportToAdmin">Report to Admin</a>
+     {% endif %}
 </div>
 
 </body>

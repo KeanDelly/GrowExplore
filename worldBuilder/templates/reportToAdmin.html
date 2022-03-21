@@ -2,7 +2,7 @@
 {% load static%}
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
@@ -11,37 +11,32 @@
     <ul>
       <li><a class="active" href="/main/">Home</a></li>
       <li><a href="/main/profile">Profile </a></li>
-      <! Is it supposed to be superuser or staff they are different>
       {% if request.user.is_superuser %}
       <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
       {% endif %}
-     <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
+      <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
        <li style="float:right"><a href="/">Logout </a></li>
     </ul>
 
-    {% if submitted == True %}<p>Form has been submitted </p> <a style="color:#73a47c; font-weight: bold; font-family: 'Courier New'; Font" href="/main/buildingOfTheDay">Submit another one?</a>
-    {% elif submitted == False %}
+    {% if submitted == True %}<p>Form has been submitted </p> <a style="color:#73a47c; font-weight: bold; font-family: 'Courier New'; Font" href="/main/buildingOfTheDay">Submit another one?</a>{% elif submitted == False %}
 
-    <br>
     <form method="post">
       {% csrf_token %}
        <table>
       {{ form.as_table }}
       </table>
       <br>
-      <button type="submit" id="save" name="save" style="color: dimGrey; font-family: 'Courier New';">Add Building</button>
+      <button type="submit" id="save" name="save" style="color: dimGrey; font-family: 'Courier New';">Submit Problem </button>
     </form>
 
-
     {% endif %}
-
+    
     
     <div class="footer">
       <a target="_blank" href="https://icons8.com/icon/19190/potted-plant"
-        >Potted Plant</a
-      >
+        >Potted Plant</a>
       icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-
+      <a style="float:centre" href="/main/privacyPolicy">Privacy Policy</a>
     </div>
 
     <script src="{% static 'gps_locator.js' %}"></script>

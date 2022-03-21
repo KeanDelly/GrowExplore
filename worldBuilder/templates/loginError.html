@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
+</head>
+<body>
+
+
+<img src="{% static 'campus_logo_white.png' %}" alt="Logo" class = homeLogo>
+
+<p> Login or Registration failed, please try again or register to access this app.</p>
+
+<img src="{% static 'log.png' %}" onclick="window.location.href='/login/'" alt="Log In" class="login">
+
+<div class = "footer">
+<a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+</div>
+</body>
+</html>
