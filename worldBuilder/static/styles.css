@@ -62,10 +62,12 @@ noHover a:hover {
     position: relative;
     top: 15px;
     left: auto;
-    width: 50%;
+    width: 90%;
+    max-width: 800px;
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
+
 }
 
 .map {
@@ -98,22 +100,15 @@ noHover a:hover {
 }
 
 .navLogo {
+  height: 25px;
     position: relative;
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
-    margin: auto;
-    top: 0;
-    overflow: hidden;
-    margin-top: -33px;
 }
 
 .centerNav {
-    float: none;
+   float: none;
     position: absolute;
-    top: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -7%);
     color: black;
     pointer-events: none;
 }
@@ -129,7 +124,8 @@ noHover a:hover {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width:15%;
+    width: 50%;
+    max-width: 250px;
     margin-top: 30px;
 }
 
@@ -138,8 +134,17 @@ noHover a:hover {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 50%;
+    width: 100%;
     margin-top: 1px;
+}
+
+.shed{
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+     position: relative;
+     margin: 200px auto;
 }
 
 .login {
@@ -147,7 +152,7 @@ noHover a:hover {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width:15%;
+    width: 40%;
 }
 
 .footer {
@@ -159,6 +164,57 @@ noHover a:hover {
     color: white;
     font-family: 'Courier New';
     text-align: left;
+    font-size: 15px;
+}
+.shelfParent {
+    position: absolute;
+}
+
+.profileDisplay {
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.profileOutput img {
+    width: 14%;
+}
+
+.firstRow {
+    transform: translate(0, 15%);
+}
+
+.secondRow {
+    transform: translate(0, 55%);
+}
+
+.thirdRow {
+    transform: translate(0, 95%);
+}
+
+.profileText {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    transform: translate(0, 30%);
+}
+
+.profileText p{
+    vertical-align: top;
+    height: 7%;
+    display: inline-block;
+    font-size: 1.2vw;
+    margin-right: 3.7%;
+    margin-left: 3.7%;
+    position: relative;
+    width: 7%;
+    background-color: #ebd1b3;
+
 }
 
 a:link {
@@ -176,4 +232,16 @@ a:visited {
 table{
     font-family: 'Courier New';
     color: dimGrey;
+}
+
+Reward{
+    display: block;
+    position: relative;
+    width:15%;
+}
+
+.font{
+    font-family: 'Courier New';
+    color: dimGrey;
+    font-weight: bold;
 }
