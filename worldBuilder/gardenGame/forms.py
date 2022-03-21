@@ -2,19 +2,10 @@ from dataclasses import field
 import datetime
 from django import forms
 from django.forms import ModelForm
-from .models import buildingOfTheDay
+from gardenGame.models import buildingOfTheDay, reportToAdmin
 from django.db.models.fields import BLANK_CHOICE_DASH
 
-
-# Create your forms here.
-
-# From used in the BOTD page to input the building of the day information
-class buildingForm(ModelForm):
-    class Meta:
-        model = buildingOfTheDay
-        fields = ('building_name', 'building_desc', 'date', 'reward')
-
-    CHOICES = [('Harrison Building', 'Harrison Building'),
+CHOICES = [('Harrison Building', 'Harrison Building'),
                ('Amory Building', 'Amory Building'),
                ('The Forum', 'The Forum'),
                ('Business School Building One', 'Business School Building One'),
@@ -42,14 +33,37 @@ class buildingForm(ModelForm):
                ('Student Health Centre', 'Student Health Centre'),
                ('Washington Singer', 'Washington Singer'),
                ('Xfi', 'Xfi')]
-    REWARDS = [('birdbox.png', 'Bird Box'),
+REWARDS = [('birdbox.png', 'Bird Box'),
                ('gardenfork.png','Garden Fork'),
                ('rake.png', 'Rake'),
                ('spade.png', 'Spade'),
                ('wateringcan.png' , 'Watering Can'),
                ('wellies.png', 'Wellies'),
                ('wheelbarrow.png', "Wheel Barrow")]
-    building_name = forms.CharField(label="Building Name", widget=forms.Select(choices=BLANK_CHOICE_DASH+CHOICES))
-    building_desc = forms.CharField(label="Description", max_length=200, widget=forms.Textarea(attrs={'rows':3, 'cols':43}))
+
+# Create your forms here.
+
+# From used in the BOTD page to input the building of the day information
+class buildingForm(ModelForm):
+    class Meta:
+        model = buildingOfTheDay
+        fields = ('name', 'description', 'date', 'reward')
+
+
+    
+    name = forms.CharField(label="Building Name", widget=forms.Select(choices=BLANK_CHOICE_DASH+CHOICES))
+    description = forms.CharField(label="Description", max_length=200, widget=forms.Textarea(attrs={'rows':3, 'cols':43}))
     date = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}), initial=datetime.date.today)
-    reward = forms.ImageField(label="Daily Reward",  widget=forms.Select(choices=BLANK_CHOICE_DASH+REWARDS))
+    reward = forms.CharField(label="Daily Reward",  widget=forms.Select(choices=BLANK_CHOICE_DASH+REWARDS))
+    #reward = forms.ImageField(label="Daily Reward",  widget=forms.Select(choices=BLANK_CHOICE_DASH+REWARDS))
+
+
+class reportToAdminForm(ModelForm):
+    class Meta:
+        model = reportToAdmin
+        fields = ('problem_name', 'problem_description', 'username', 'email')
+
+        problem_description = forms.CharField(max_length=200, widget=forms.Textarea(attrs={'rows':3, 'cols':43}))
+        username = forms.CharField(widget=forms.TextInput())
+        email = forms.CharField(widget=forms.EmailInput())
+
