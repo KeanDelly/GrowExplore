@@ -96,7 +96,8 @@ noHover a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
+    max-width:700px;
 }
 
 .navLogo {
@@ -153,6 +154,7 @@ noHover a:hover {
     margin-right: auto;
     position: relative;
     width: 40%;
+    max-width: 250px;
 }
 
 .footer {

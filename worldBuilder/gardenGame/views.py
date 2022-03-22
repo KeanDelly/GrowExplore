@@ -32,7 +32,6 @@ def profile(request):
     return render(request, 'profile.html', args)
 
 
-
 def buildingOfTheDay(request):
     submitted = False
     building_list = BOTDModel.objects.all()

@@ -58,4 +58,3 @@ def register_request(request):
 		return redirect('/loginError')
 	form = NewUserForm()
 	return render (request=request, template_name="register.html", context={"register_form":form})
-

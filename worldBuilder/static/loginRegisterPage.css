@@ -44,6 +44,8 @@ main {
 
 .form_div {
     text-transform: uppercase;
+    text-align: center;
+    display: block;
 }
 
 .form_div > label {
@@ -136,4 +138,22 @@ a:visited {
     color: dimgrey;
     background-color: transparent;
     text-decoration: none;
+}
+
+p{
+    font-family: 'Courier New';
+    color: DimGray;
+    font-size: 100%;
+}
+
+.reset_form{
+    font-family: 'Courier New';
+    color: DimGray;
+}
+
+.login{
+    height:"80px" ;
+    width:"170px";
+     margin-left: auto;
+     margin-right: auto;
 }
