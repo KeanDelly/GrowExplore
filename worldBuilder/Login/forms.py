@@ -7,10 +7,11 @@ from django.contrib.auth.models import User
 
 class NewUserForm(UserCreationForm):
 	email = forms.EmailField(required=True)
+	staffVerification = forms.CharField(required=False)
 
 	class Meta:
 		model = User
-		fields = ("username", "email", "password1", "password2")
+		fields = ("username", "email", "password1", "password2", "staffVerification")
 
 	def save(self, commit=True):
 		user = super(NewUserForm, self).save(commit=False)

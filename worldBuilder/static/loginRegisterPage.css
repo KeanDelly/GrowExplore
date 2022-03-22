@@ -14,6 +14,7 @@ header {
     justify-content: center;
     height: 10vh;
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+    padding-bottom: 5px;
 }
 
 h1 {

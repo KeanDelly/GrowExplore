@@ -4,6 +4,7 @@ from .forms import NewUserForm
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -41,7 +42,18 @@ def register_request(request):
 	if request.method == "POST":
 		form = NewUserForm(request.POST)
 		if form.is_valid():
-			user = form.save()
+			code = form.cleaned_data.get('staffVerification')
+			user = User(username=form.cleaned_data.get('username'), email =form.cleaned_data.get('email') )
+			user.set_password(form.cleaned_data.get('password1'))
+			if code != "":
+				if code == "54321":
+					user.is_superuser=True
+					user.is_staff=True
+				else:
+					messages.error(request, "Unsuccessful registration, Invalid Staff Code")
+					return redirect('/loginError')
+			
+			user.save()
 			login(request, user)
 			messages.success(request, "Registration successful." )
 			return redirect('/main')
