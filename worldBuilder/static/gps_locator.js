@@ -2,6 +2,7 @@ const x = document.getElementById("map");
 const y = document.getElementById("pointer");
 const output = document.getElementById("output");
 
+
 //This Data will be moved into config.json
 const latitudeTop = 50.740142;
 const longitudeLeft = -3.538104;
@@ -31,24 +32,38 @@ fetch("../static/config.json") //Loads JSON data into JavaScript program
         mainObj = data;
     });
 
+
+
+
+
+
 /**
  * Checks if the browser supports Geolocation API
  * If so, showPosition is executed
  */
-function getLocation() {
 
+
+
+
+function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
+
+        return "Harrison Building" + "**" + "1"
+
+
     } else {
         output.innerHTML = "Geolocation is not supported by this browser.";
+
     }
-}
+};
 
 /**
  * Holds the main logic for pointing to the player's locations on the map
  * and identifying if the player is standing near any buildings
  * @param position is the
  */
+
 function showPosition(position) {
 
 
@@ -56,8 +71,8 @@ function showPosition(position) {
     let currentLongitude = position.coords.longitude;
 
     //Harrison Building coordinates, Use this space to test different locations remotely
-    //currentLatitude = 50.7373512;
-    //currentLongitude = -3.5326224;
+    currentLatitude = 50.7373512;
+    currentLongitude = -3.5326224;
 
 
     if ((currentLatitude<latitudeTop && currentLatitude>latitudeBot) //Checks if player coords are within campus
@@ -99,6 +114,7 @@ function showPosition(position) {
         console.log(relativeLatitudes)
 
         let outputText = "";
+        var getOutput = [];
         for (i = 0; i<relativeLongitudes.length; i++) {
             let y = relativeLatitudes[i]-yPosition;
             let x = relativeLongitudes[i]-xPosition;
@@ -107,24 +123,42 @@ function showPosition(position) {
 
                 if (outputText.localeCompare("") === 0) {
                     outputText += " "+locations[i];
+                    getOutput.push(locations[i])
                 } else {
                     outputText += " & "+locations[i];
+                    getOutput.push(locations[i])
+
                 }
             }
-
         }
 
         if (outputText.localeCompare("") === 0) {
             output.innerHTML = "You don't seem to be near any buildings, keep looking!"
         }else {
-
             output.innerHTML = "You have checked in at :" + outputText
+
+
+
         }
 
     } else { //Current coordinates are outside the bounds of the campus coordinates
         console.log (currentLatitude + ", " + currentLongitude)
         console.log ("The player is outside the university")
         output.innerHTML = "You are outside the university";
+
     }
 
+
 }
+
+
+
+
+function triggerPython() {
+    var thing = getLocation()
+    outputThis = "../simple_function?" + thing
+    window.location.href = outputThis
+
+    //window.location.href = "../simple_function?whatever";
+
+};
