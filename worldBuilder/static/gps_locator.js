@@ -54,9 +54,6 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition);
 
 
-        return buildingName
-
-
     } else {
         output.innerHTML = "Geolocation is not supported by this browser.";
 
@@ -170,7 +167,7 @@ function triggerPython() {
 
 
 
-    outputThis = "../simple_function?" + buildingName + "?" + username;
+    var outputThis = "../simple_function?" + buildingName + "?" + username;
 
     window.location.href = outputThis
     // simple_function?buildingname & buildingname?

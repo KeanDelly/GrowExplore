@@ -79,7 +79,7 @@ def loginStreak(request, user_id):
 
 def simple_function(request):
     listTemp = str(request).split("?")
-    TempUsername = listTemp[2]
+    TempUsername = request.user.username
 
     Temp = listTemp[1]
     Temp = Temp.split("%20&%20")[0]
@@ -89,6 +89,7 @@ def simple_function(request):
 
     ##May need to correct string to be int and then put in error handing
     userList = User.objects.get(username = TempUsername)
+
     user = userList
     if(building == "Harrison Building"):
         if(user.Harrison_lastLogin != str(datetime.today())):
@@ -236,7 +237,11 @@ def simple_function(request):
             user.Xfi_lastLogin = datetime.today()
 
 
-    buildingOTD = buildingOfTheDay.objects.get(name = building)
+    buildingsOTDList = buildingOfTheDay.objects.all()
+    buildingOTD = None
+    for i in buildingsOTDList:
+        if(i.date == datetime.today()):
+            buildingOTD = i
     if(buildingOTD == building):
         reward = buildingOTD.reward
         if(user.UserRewards != ""):

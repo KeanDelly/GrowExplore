@@ -40,7 +40,6 @@
   Building of the Day!:
   {% for building in building_list %} {% if today == building.date %}
   {{building.building_name}}, Description: {{building.building_desc}} , Reward:
-  <!Need to fix this so it displays an image in profile>
   {{building.reward}}<br>{% endif %} {% endfor %}
 </p>
 
@@ -54,7 +53,7 @@
 </div>
 
 
-<script src = "{% static 'gps_locator.js' %}" ></script>
+<script type="text/javascript" src="{% static 'gps_locator.js' %}"></script>
 
 </body>
 </html>
