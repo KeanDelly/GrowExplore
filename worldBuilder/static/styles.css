@@ -1,5 +1,6 @@
 h1 {
     margin: auto;
+    margin-top: 10px;
     left: 0;
     right: 0;
     top: 12%;
@@ -74,7 +75,6 @@ noHover a:hover {
     margin-left: auto;
     margin-right:auto;
     background-color: #d0fef2;
-
 }
 
 .map {
@@ -115,6 +115,7 @@ noHover a:hover {
 
 .centerNav {
     position: absolute;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, 160%);
     color: black;
@@ -224,6 +225,7 @@ noHover a:hover {
 }
 
 .footer {
+    z-index: 3;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -233,6 +235,7 @@ noHover a:hover {
     font-family: 'Courier New';
     text-align: left;
     font-size: 15px;
+    max-height: 50px;
 }
 .shelfParent {
     position: absolute;

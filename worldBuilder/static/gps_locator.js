@@ -54,6 +54,9 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition);
 
 
+        return buildingName
+
+
     } else {
         output.innerHTML = "Geolocation is not supported by this browser.";
 
@@ -137,7 +140,7 @@ function showPosition(position) {
         if (outputText.localeCompare("") === 0) {
             output.innerHTML = "You don't seem to be near any buildings, keep looking!"
         }else {
-            output.innerHTML = "You are near " + outputText
+            output.innerHTML = "You have checked in at :" + outputText
 
 
 
@@ -162,8 +165,12 @@ function showPosition(position) {
 
 function triggerPython() {
     let buildingName = document.getElementById('output').textContent;
-    buildingName = buildingName.substring(13)
-    var outputThis = "../simple_function?" + buildingName;
+    buildingName = buildingName.substring(25)
+    let username = document.getElementById('mainUsername').textContent;
+
+
+
+    outputThis = "../simple_function?" + buildingName + "?" + username;
 
     window.location.href = outputThis
     // simple_function?buildingname & buildingname?

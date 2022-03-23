@@ -107,7 +107,7 @@ footer {
 
 footer > p {
     text-align: center;
-    font-family: 'Courier New';
+    font-family: 'Courier New', serif;
     letter-spacing: 3px;
 }
 

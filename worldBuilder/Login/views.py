@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.shortcuts import  render, redirect
 from .forms import NewUserForm
 from django.contrib.auth import login, authenticate
@@ -11,6 +12,31 @@ User = get_user_model()
 from datetime import datetime
 import re
 from gardenGame.models import buildingOfTheDay
+
+from pathlib import Path
+import os
+from datetime import date
+from django.http import HttpResponse
+
+
+
+
+DIR = Path(__file__).resolve().parent.parent
+
+directory = "static/Users/"
+
+BASE_DIR = os.path.join(DIR, directory)
+
+building_list = ["Harrison Building","Amory Building","The Forum",
+				 "Business School Building One","Cornwall House",
+				 "Northcott Theatre","Geoffrey Pope","Great Hall","Hatherly",
+				 "Henry Wellcome | Biocatalysis",
+				 "Innovation One SWIoT",
+				 "Institute of AIS","INTO Study Centre",
+                 "Laver","Living Systems","Mary Harris","Old Library",
+                 "Peter Chalk Centre","Physics","Queens","Reed Hall","Reed Mews Wellbeing Centre",
+                 "Sir Henry Wellcome Building","Sports Park",
+                 "Streatham Court","Student Health Centre","Washington Singer","Xfi"]
 
 
 # Create your views here.
@@ -34,6 +60,49 @@ def login_request(request):
 			if user is not None:
 				login(request, user)
 				messages.info(request, f"You are now logged in as {username}.")
+
+				today = date.today()
+				d1 = today.strftime("%d/%m/%Y")
+				current_date = d1.split("/")
+				#read in that users file and store it as array
+				#increment the login one, update the date
+				#then write the whole file back
+
+				file_contents_array = []
+				with open(os.path.join(BASE_DIR, username + ".txt")) as my_file:
+					for line in my_file:
+						file_contents_array.append(line)
+
+				my_file.close()
+
+				login_holder = file_contents_array[0]
+
+				login_data = login_holder.split(",")
+
+				last_logged_date = login_data[2]
+				last_logged_date = last_logged_date.split("/")
+
+				if (last_logged_date[0] < current_date[0]):
+					login_data[1] = str(int(login_data[1]) + 1)
+					login_data[2] = d1
+				elif (last_logged_date[1] < current_date[1]):
+					login_data[1] = str(int(login_data[1]) + 1)
+					login_data[2] = d1
+				elif (last_logged_date[2] < current_date[2]):
+					login_data[1] = str(int(login_data[1]) + 1)
+					login_data[2] = d1
+
+				login_holder = ','.join(login_data)
+
+				file_contents_array[0] = login_holder+"\n"
+
+				fileOverwrite = open(os.path.join(BASE_DIR, form.cleaned_data['username'] + ".txt"), "w")
+
+				for line in file_contents_array:
+					fileOverwrite.write(line)
+
+				fileOverwrite.close()
+
 				return redirect('/main/')
 			else:
 				messages.error(request, "Invalid username or password.")
@@ -63,6 +132,17 @@ def register_request(request):
 			user.save()
 			login(request, user)
 			messages.success(request, "Registration successful." )
+			today = date.today()
+			d1 = today.strftime("%d/%m/%Y")
+			current_date = d1.split("/")
+			current_date[0] = str(int(current_date[0])-1)
+			fileCreate = open(os.path.join(BASE_DIR, form.cleaned_data['username']+".txt"), "x")
+			fileCreate.write("login_streak,0,"+current_date[0]+"/"+current_date[1]+"/"+current_date[2])
+			fileCreate.close()
+			fileAppend = open(os.path.join(BASE_DIR, form.cleaned_data['username']+".txt"), "a")
+			for build in building_list:
+				fileAppend.write(build + ",0,00/00/0000\n")
+			fileCreate.close()
 			return redirect('/main')
 		messages.error(request, "Unsuccessful registration. Invalid information.")
 		return redirect('/loginError')
@@ -249,5 +329,13 @@ def simple_function(request):
             user.UserRewards = reward
     user.save()
     return redirect("/main")
+
+def test(request):
+
+	if request.GET.get('NameOfYourButton') == 'YourValue':
+		print('\nuser')
+		print('\nuser clicked button')
+		return HttpResponse("""<html><script>window.location.replace('/')</script></html>""")
+
 
 

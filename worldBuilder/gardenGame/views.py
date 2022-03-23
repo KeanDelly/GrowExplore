@@ -19,7 +19,6 @@ def mainPage(request):
         text = request.user.username
     else:
         text = "error"
-
     return render(request, 'MainPage.html', {'building_list': building_list , 'today': datetime.date.today, 'user_name': text})
 
 def privacyPolicy(request):
@@ -33,8 +32,6 @@ def profile(request):
         text = request.user.username
     else:
         text = "error"
-        return render(request, 'loginError.html')
-
 
     user = User.objects.get(username = text)
     streaksTuple = []

@@ -27,9 +27,7 @@
 
 ```(env) $ python -m pip install Django``` 
 
-```(env) $ python -m pip install Pillow``` 
-
-This command fetches the django and pillow packages from the Python Package Index (PyPI) using pip.
+This command fetches the django package from the Python Package Index (PyPI) using pip.
 
 Using shell to navigate to the directory containing the `manage.py` file. We can then use the following command to run the app server
 
@@ -55,8 +53,6 @@ Quit the server with CONTROL-C.
 The web app server will now be running at the location: ```http://127.0.0.1:8000/```
 
 which can be copy pasted into any preferred web browser
-
-[![Set up, Migration and Testing](https://github.com/KeanDelly/ADjangoApp/actions/workflows/django.yml/badge.svg)](https://github.com/KeanDelly/ADjangoApp/actions/workflows/django.yml)
 
 
 ## Concept:

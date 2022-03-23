@@ -3,17 +3,20 @@
     {
       "name": "Harrison Building",
       "latitude": 50.737841,
-      "longitude": -3.532590
+      "longitude": -3.532590,
+      "type": "blue"
     },
     {
       "name": "Amory Building",
       "latitude": 50.736615,
-      "longitude": -3.531617
+      "longitude": -3.531617,
+	  "type": "green"
     },
     {
       "name": "The Forum",
       "latitude": 50.734996,
-      "longitude": -3.534190
+      "longitude": -3.534190,
+	  "type": "orchid_black"
     },
 	{
 		"name":"Business School Building One",
@@ -117,7 +120,7 @@
 	},
 
 	{
-		"name":"Sir Henry Welcome Building for Mood Disorders Research",
+		"name":"Sir Henry Wellcome Building for Mood Disorders Research",
 		"latitude":50.73335,
 		"longitude":-3.53623
 	},

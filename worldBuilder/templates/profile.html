@@ -24,44 +24,46 @@
         </nav>
 </header>
 <div class="header">
-<h1>{{ user_name }}'s Profile </h1>
+<h1 id = "username">{{ user_name }}'s Profile </h1>
 </div>
 
 <div class ="shelfParent">
+
     <img src="{% static 'big_shelf.png' %}"  alt="shelf" class= shelf>
 </div>
 
 <div class="profileDisplay">
 
     <p class="profileOutput" id="profilePlants">
-        <img class="firstRow" src="{% static 'plants/red2.png' %}"  alt="plant">
-        <img class="firstRow" src="{% static 'plants/blue1.png' %}"  alt="plant">
-        <img class="firstRow" src="{% static 'plants/green3.png' %}"  alt="plant">
+
+        <img id="plant1" class="firstRow" style="display: none" alt="plant1">
+        <img id="plant2" class="firstRow" style="display: none" alt="plant2">
+        <img id="plant3" class="firstRow" style="display: none" alt="plant3">
         <br>
-        <img class="secondRow" src="{% static 'plants/green1.png' %}"  alt="plant">
-        <img class="secondRow" src="{% static 'plants/yellow2.png' %}"  alt="plant">
-        <img class="secondRow" src="{% static 'plants/pink1.png' %}"  alt="plant">
+        <img id="plant4" class="secondRow" style="display: none" alt="plant4">
+        <img id="plant5" class="secondRow" style="display: none" alt="plant5">
+        <img id="plant6" class="secondRow" style="display: none" alt="plant6">
         <br>
-        <img class="thirdRow" src="{% static 'plants/red1.png' %}"  alt="plant">
-        <img class="thirdRow" src="{% static 'plants/pink2.png' %}"  alt="plant">
-        <img class="thirdRow" src="{% static 'plants/pink3.png' %}"  alt="plant">
+        <img id="plant7" class="thirdRow" style="display: none" alt="plant7">
+        <img id="plant8" class="thirdRow" style="display: none" alt="plant8">
+        <img id="plant9" class="thirdRow" style="display: none" alt="plant9">
     </p>
-    <div class="profileText" style="transform: translate(0, 30%)" id="profileText">
-        <p style="transform: translate(0, -60%)">{{topStreaks1Name}} <br> {{topStreaks1Number}}</p>
-        <p style="transform: translate(0, -60%)">{{topStreaks2Name}} <br> {{topStreaks2Number}}</p>
-        <p style="transform: translate(0, -60%)">{{topStreaks3Name}} <br> {{topStreaks3Number}}</p>
+
+    <div class="profileText" id="profileText">
+        <p id = "text1" class = "textFirstRow" style="display: none"></p>
+        <p id = "text2" class = "textFirstRow" style="display: none"></p>
+        <p id = "text3" class = "textFirstRow" style="display: none"></p>
         <br>
-        <p style="transform: translate(0, 460%)">{{topStreaks4Name}} <br> {{topStreaks4Number}}</p>
-        <p style="transform: translate(0, 460%)">{{topStreaks5Name}} <br> {{topStreaks5Number}}</p>
-        <p style="transform: translate(0, 460%)">{{topStreaks6Name}} <br> {{topStreaks6Number}}</p>
+        <p id = "text4" class = "textSecondRow" style="display: none"></p>
+        <p id = "text5" class = "textSecondRow" style="display: none"></p>
+        <p id = "text6" class = "textSecondRow" style="display: none"></p>
         <br>
-        <p style="transform: translate(0, 960%)">{{topStreaks7Name}} <br> {{topStreaks7Number}}</p>
-        <p style="transform: translate(0, 960%)">{{topStreaks8Name}} <br> {{topStreaks8Number}}</p>
-        <p style="transform: translate(0, 960%)">{{topStreaks8Name}} <br> {{topStreaks9Number}}</p>
+        <p id = "text7" class = "textThirdRow" style="display: none"></p>
+        <p id = "text8" class = "textThirdRow" style="display: none"></p>
+        <p id = "text9" class = "textThirdRow" style="display: none"></p>
     </div>
+
 </div>
-<br>
- <img src="{% static 'shed.png' %}"  alt="shed" class= shed>
 
 
 <div class = "footer">
@@ -72,6 +74,12 @@
      {% endif %}
 </div>
 
-<script src="display.js"></script>
+
+
+
+<script type="text/javascript" src="{% static 'display.js' %}"></script>
+
+
+
 </body>
 </html>

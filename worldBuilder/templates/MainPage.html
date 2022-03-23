@@ -23,24 +23,23 @@
             </ul>
         </nav>
 </header>
-<div class="parent">
-  <img src="{% static 'GreenCampus.jpg' %}" alt="Campus" class="map" />
-  <img
-          src="{% static 'pin.png' %}"
-          alt="Pointer"
-          class="pointer"
-          id="pointer"
-  />
-</div>
-<img
-        src="{% static 'check_in.png' %}"
-        onclick="triggerPython()"
-        alt="Check In"
-        class="checkIn"
-/>
+    <div class="parent">
+      <img src="{% static 'GreenCampus.jpg' %}" alt="Campus" class="map" />
+      <img
+        src="{% static 'pin.png' %}"
+        alt="Pointer"
+        class="pointer"
+        id="pointer"
+      />
+    </div>
 
+    <img
+      src="{% static 'check_in.png' %}"
+      onclick="triggerPython()"
+      alt="Check In"
+      class="checkIn"
 
-
+    />
 <p>
   Building of the Day!:
   {% for building in building_list %} {% if today == building.date %}
@@ -48,8 +47,7 @@
   <img style="width:10%;" src=/static/items/{{building.reward}} alt="{{building.reward}}" class="Reward"><br>{% endif %} {% endfor %}
 </p>
 
-<p id="output" class="output">loading...</p>
-
+    <p id="output" class="output">loading...</p>
 
 <div class = "footer">
     <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
@@ -59,7 +57,8 @@
      {% endif %}
  </div>
 
-<script type="text/javascript" src="{% static 'gps_locator.js' %}"></script>
+
+    <script src = "{% static 'gps_locator.js' %}" ></script>
 
 </body>
 </html>
