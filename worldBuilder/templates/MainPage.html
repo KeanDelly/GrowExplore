@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{% static 'styles.css' %}" />
   <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
 </head>
-<body onload="getLocation">
+<body onload="getLocation()">
 <ul>
   <li><a class="active" href="/main/">Home</a></li>
   <li><a href="/main/profile">Profile </a></li>
@@ -45,7 +45,6 @@
 
 <p id="output" class="output">loading...</p>
 
-<p id="mainUsername">{{ user_name }}</p>
 
 <div class="footer">
   <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a>

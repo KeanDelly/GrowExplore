@@ -32,13 +32,8 @@ fetch("../static/config.json") //Loads JSON data into JavaScript program
     })
     .then(function(data) {
         mainObj = data;
+
     });
-
-
-
-
-
-
 
 
 /**
@@ -49,7 +44,7 @@ fetch("../static/config.json") //Loads JSON data into JavaScript program
 setTimeout(
 
 function getLocation() {
-
+    console.log(getObj())
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
 
@@ -73,8 +68,7 @@ function showPosition(position) {
     let currentLongitude = position.coords.longitude;
 
     //Harrison Building coordinates, Use this space to test different locations remotely
-    currentLatitude = 50.7373512;
-    currentLongitude = -3.5326224;
+
 
 
     if ((currentLatitude<latitudeTop && currentLatitude>latitudeBot) //Checks if player coords are within campus
@@ -137,7 +131,7 @@ function showPosition(position) {
         if (outputText.localeCompare("") === 0) {
             output.innerHTML = "You don't seem to be near any buildings, keep looking!"
         }else {
-            output.innerHTML = "You have checked in at :" + outputText
+            output.innerHTML = "You are near " + outputText
 
 
 
@@ -158,16 +152,14 @@ function showPosition(position) {
 }
 
 
-
-
 function triggerPython() {
     let buildingName = document.getElementById('output').textContent;
-    buildingName = buildingName.substring(25)
-    let username = document.getElementById('mainUsername').textContent;
+    buildingName = buildingName.substring(13)
 
 
 
-    var outputThis = "../simple_function?" + buildingName + "?" + username;
+
+    var outputThis = "../simple_function?" + buildingName
 
     window.location.href = outputThis
     // simple_function?buildingname & buildingname?
