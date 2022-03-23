@@ -15,7 +15,7 @@ class TestForm(TestCase):
         form = NewUserForm(data = {"username":'Name1', "email":'email1@gmail.com',"password1" : '12345', "password2":'12345'})
         self.assertFalse(form.is_valid())
 
-     #Tests for Staff Verification
+    #Tests for Staff Verification
     def test_StaffUserForm_no_data(self):
         form = NewUserForm(data={})
         self.assertFalse(form.is_valid())
@@ -27,4 +27,4 @@ class TestForm(TestCase):
         self.assertTrue(form.is_valid())
     def test_StaffUserForm_bad_data(self):
         form = NewUserForm(data = {"username":'Name1', "email":'email1@gmail.com',"password1" : '12345', "password2":'12345'})
-        self.assertFalse(form.is_valid()) 
+        self.assertFalse(form.is_valid())
