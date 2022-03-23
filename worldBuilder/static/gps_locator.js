@@ -68,7 +68,7 @@ function showPosition(position) {
     let currentLongitude = position.coords.longitude;
 
     //Harrison Building coordinates, Use this space to test different locations remotely
-
+    //
 
 
     if ((currentLatitude<latitudeTop && currentLatitude>latitudeBot) //Checks if player coords are within campus
@@ -154,7 +154,7 @@ function showPosition(position) {
 
 function triggerPython() {
     let buildingName = document.getElementById('output').textContent;
-    buildingName = buildingName.substring(13)
+    buildingName = buildingName.substring(14)
 
 
 

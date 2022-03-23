@@ -81,7 +81,11 @@ def simple_function(request):
     listTemp = str(request).split("?")
     TempUsername = request.user.username
 
-    Temp = listTemp[1]
+    try:
+        Temp = listTemp[1]
+    except:
+        return redirect("main")
+
     Temp = Temp.split("%20&%20")[0]
     building = re.sub(r'%20', ' ', Temp)
     building = re.sub(r"'>", '', building)
