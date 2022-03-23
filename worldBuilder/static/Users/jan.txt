@@ -1,0 +1,34 @@
+login_streak,3,23/03/2022
+
+
+
+
+
+Harrison Building,4,00/00/0000
+Amory Building,0,00/00/0000
+The Forum,0,00/00/0000
+Business School Building One,0,00/00/0000
+Cornwall House,2,00/00/0000
+Northcott Theatre,3,00/00/0000
+Geoffrey Pope,2,00/00/0000
+Great Hall,3,00/00/0000
+Hatherly,2,00/00/0000
+Henry Wellcome | Biocatalysis,0,00/00/0000
+Innovation One SWIoT,0,00/00/0000
+Institute of AIS,0,00/00/0000
+INTO Study Centre,0,00/00/0000
+Laver,0,00/00/0000
+Living Systems,0,00/00/0000
+Mary Harris,4,00/00/0000
+Old Library,0,00/00/0000
+Peter Chalk Centre,0,00/00/0000
+Physics,6,00/00/0000
+Queens,0,00/00/0000
+Reed Hall,0,00/00/0000
+Reed Mews Wellbeing Centre,0,00/00/0000
+Sir Henry Wellcome Building,0,00/00/0000
+Sports Park,0,00/00/0000
+Streatham Court,0,00/00/0000
+Student Health Centre,0,00/00/0000
+Washington Singer,0,00/00/0000
+Xfi,0,00/00/0000
