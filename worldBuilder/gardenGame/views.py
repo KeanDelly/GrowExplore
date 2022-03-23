@@ -88,7 +88,66 @@ def profile(request):
     topStreaks8Number = str(topStreaks[7][1])
     topStreaks9Name = topStreaks[8][0]
     topStreaks9Number = str(topStreaks[8][1])
-    args={'user_name': text, 'topStreaks1Name': topStreaks1Name, 'topStreaks1Number':topStreaks1Number,  'topStreaks2Name': topStreaks2Name, 'topStreaks2Number':topStreaks2Number, 'topStreaks3Name': topStreaks3Name, 'topStreaks3Number':topStreaks3Number, 'topStreaks4Name': topStreaks4Name, 'topStreaks4Number':topStreaks4Number, 'topStreaks5Name': topStreaks5Name, 'topStreaks5Number':topStreaks5Number, 'topStreaks6Name': topStreaks6Name, 'topStreaks6Number':topStreaks6Number, 'topStreaks7Name': topStreaks7Name, 'topStreaks7Number':topStreaks7Number, 'topStreaks8Name': topStreaks8Name, 'topStreaks8Number':topStreaks8Number, 'topStreaks9Name': topStreaks9Name, 'topStreaks9Number':topStreaks9Number }
+
+    buildingRewards = user.UserRewards
+    buildingRewardsList = buildingRewards.split("*")
+    buildingRewardsList = buildingRewardsList[:6]
+    if(len(buildingRewardsList) == 0):
+        buildingReward1 = None
+        buildingReward2 = None
+        buildingReward3 = None
+        buildingReward4 = None
+        buildingReward5 = None
+        buildingReward6 = None
+
+    elif(len(buildingRewardsList) == 1):
+        buildingReward1 = buildingRewardsList[0]
+        buildingReward2 = None
+        buildingReward3 = None
+        buildingReward4 = None
+        buildingReward5 = None
+        buildingReward6 = None
+
+    elif(len(buildingRewardsList) == 2):
+        buildingReward1 = buildingRewardsList[0]
+        buildingReward2 = buildingRewardsList[1]
+        buildingReward3 = None
+        buildingReward4 = None
+        buildingReward5 = None
+        buildingReward6 = None
+    elif(len(buildingRewardsList) == 3):
+        buildingReward1 = buildingRewardsList[0]
+        buildingReward2 = buildingRewardsList[1]
+        buildingReward3 = buildingRewardsList[2]
+        buildingReward4 = None
+        buildingReward5 = None
+        buildingReward6 = None
+    elif(len(buildingRewardsList) == 4):
+        buildingReward1 = buildingRewardsList[0]
+        buildingReward2 = buildingRewardsList[1]
+        buildingReward3 = buildingRewardsList[2]
+        buildingReward4 = buildingRewardsList[3]
+        buildingReward5 = None
+        buildingReward6 = None
+
+    elif(len(buildingRewardsList) == 5):
+        buildingReward1 = buildingRewardsList[0]
+        buildingReward2 = buildingRewardsList[1]
+        buildingReward3 = buildingRewardsList[2]
+        buildingReward4 = buildingRewardsList[3]
+        buildingReward5 = buildingRewardsList[4]
+        buildingReward6 = None
+
+    elif(len(buildingRewardsList) == 6):
+        buildingReward1 = buildingRewardsList[0]
+        buildingReward2 = buildingRewardsList[1]
+        buildingReward3 = buildingRewardsList[2]
+        buildingReward4 = buildingRewardsList[3]
+        buildingReward5 = buildingRewardsList[4]
+        buildingReward6 = buildingRewardsList[5]
+
+
+    args={'user_name': text, 'topStreaks1Name': topStreaks1Name, 'topStreaks1Number':topStreaks1Number,  'topStreaks2Name': topStreaks2Name, 'topStreaks2Number':topStreaks2Number, 'topStreaks3Name': topStreaks3Name, 'topStreaks3Number':topStreaks3Number, 'topStreaks4Name': topStreaks4Name, 'topStreaks4Number':topStreaks4Number, 'topStreaks5Name': topStreaks5Name, 'topStreaks5Number':topStreaks5Number, 'topStreaks6Name': topStreaks6Name, 'topStreaks6Number':topStreaks6Number, 'topStreaks7Name': topStreaks7Name, 'topStreaks7Number':topStreaks7Number, 'topStreaks8Name': topStreaks8Name, 'topStreaks8Number':topStreaks8Number, 'topStreaks9Name': topStreaks9Name, 'topStreaks9Number':topStreaks9Number, 'buildingReward1' : buildingReward1, 'buildingReward2' : buildingReward2, 'buildingReward3' : buildingReward3, 'buildingReward4' : buildingReward4, 'buildingReward5' : buildingReward5, 'buildingReward6' : buildingReward6 }
 
     return render(request, 'profile.html', args)
 
