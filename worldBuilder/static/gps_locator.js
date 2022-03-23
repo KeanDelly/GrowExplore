@@ -3,6 +3,7 @@ const y = document.getElementById("pointer");
 const output = document.getElementById("output");
 
 
+
 //This Data will be moved into config.json
 const latitudeTop = 50.740142;
 const longitudeLeft = -3.538104;
@@ -10,6 +11,7 @@ const latitudeBot = 50.731926;
 const longitudeRight = -3.524936;
 const xDifference = Math.abs(longitudeLeft-longitudeRight)
 const yDifference = Math.abs(latitudeTop-latitudeBot)
+
 
 "use strict";
 
@@ -37,26 +39,29 @@ fetch("../static/config.json") //Loads JSON data into JavaScript program
 
 
 
+
+
 /**
  * Checks if the browser supports Geolocation API
  * If so, showPosition is executed
  */
 
-
-
+setTimeout(
 
 function getLocation() {
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
 
-        return "Harrison Building" + "**" + "1"
+
+        return buildingName
 
 
     } else {
         output.innerHTML = "Geolocation is not supported by this browser.";
 
     }
-};
+}, 200);
 
 /**
  * Holds the main logic for pointing to the player's locations on the map
@@ -139,12 +144,16 @@ function showPosition(position) {
 
 
 
+
+
         }
 
     } else { //Current coordinates are outside the bounds of the campus coordinates
         console.log (currentLatitude + ", " + currentLongitude)
+
         console.log ("The player is outside the university")
         output.innerHTML = "You are outside the university";
+
 
     }
 
@@ -155,10 +164,16 @@ function showPosition(position) {
 
 
 function triggerPython() {
-    var thing = getLocation()
-    outputThis = "../simple_function?" + thing
-    window.location.href = outputThis
+    let buildingName = document.getElementById('output').textContent;
+    buildingName = buildingName.substring(25)
+    let username = document.getElementById('mainUsername').textContent;
 
+
+
+    outputThis = "../simple_function?" + buildingName + "?" + username;
+
+    window.location.href = outputThis
+    // simple_function?buildingname & buildingname?
     //window.location.href = "../simple_function?whatever";
 
 };
