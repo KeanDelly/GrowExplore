@@ -137,7 +137,7 @@ function showPosition(position) {
         if (outputText.localeCompare("") === 0) {
             output.innerHTML = "You don't seem to be near any buildings, keep looking!"
         }else {
-            output.innerHTML = "You have checked in at :" + outputText
+            output.innerHTML = "You are near " + outputText
 
 
 
@@ -162,12 +162,8 @@ function showPosition(position) {
 
 function triggerPython() {
     let buildingName = document.getElementById('output').textContent;
-    buildingName = buildingName.substring(25)
-    let username = document.getElementById('mainUsername').textContent;
-
-
-
-    var outputThis = "../simple_function?" + buildingName + "?" + username;
+    buildingName = buildingName.substring(13)
+    var outputThis = "../simple_function?" + buildingName;
 
     window.location.href = outputThis
     // simple_function?buildingname & buildingname?

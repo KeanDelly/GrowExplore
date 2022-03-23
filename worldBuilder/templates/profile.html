@@ -9,15 +9,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body onload()="getPlants">
-<ul>
-    <li><a class="active" href="/main/">Home</a></li>
-    <li><a href="/main/profile">Profile </a></li>
-    {% if request.user.is_superuser %}
-    <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
-    {% endif %}
-    <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="Campus Builder"></a></li>
-    <li style="float:right"><a href="/">Logout </a></li>
-</ul>
+<header class="navBar">
+<!-- Logo -->
+        <a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a class="active" href="/main/">Home</a></li>
+                <li><a href="/main/profile">Profile </a></li>
+                {% if request.user.is_superuser %}
+                <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
+                {% endif %}
+                <li style="float:right"><a href="/">Logout </a></li>
+            </ul>
+        </nav>
+</header>
 <div class="header">
 <h1>{{ user_name }}'s Profile </h1>
 </div>
@@ -42,17 +47,17 @@
         <img class="thirdRow" src="{% static 'plants/pink3.png' %}"  alt="plant">
     </p>
     <div class="profileText" style="transform: translate(0, 30%)" id="profileText">
-        <p style="transform: translate(0, -60%)">Harrison Building</p>
-        <p style="transform: translate(0, -60%)">Business School</p>
-        <p style="transform: translate(0, -60%)">Northcott Theatre</p>
+        <p style="transform: translate(0, -60%)">{{topStreaks1Name}} <br> {{topStreaks1Number}}</p>
+        <p style="transform: translate(0, -60%)">{{topStreaks2Name}} <br> {{topStreaks2Number}}</p>
+        <p style="transform: translate(0, -60%)">{{topStreaks3Name}} <br> {{topStreaks3Number}}</p>
         <br>
-        <p style="transform: translate(0, 460%)">The Forum</p>
-        <p style="transform: translate(0, 460%)">Great Hall</p>
-        <p style="transform: translate(0, 460%)">Peter Chalk</p>
+        <p style="transform: translate(0, 460%)">{{topStreaks4Name}} <br> {{topStreaks4Number}}</p>
+        <p style="transform: translate(0, 460%)">{{topStreaks5Name}} <br> {{topStreaks5Number}}</p>
+        <p style="transform: translate(0, 460%)">{{topStreaks6Name}} <br> {{topStreaks6Number}}</p>
         <br>
-        <p style="transform: translate(0, 960%)">Streatham Court</p>
-        <p style="transform: translate(0, 960%)">Geoffrey Pope</p>
-        <p style="transform: translate(0, 960%)">Amory Building</p>
+        <p style="transform: translate(0, 960%)">{{topStreaks7Name}} <br> {{topStreaks7Number}}</p>
+        <p style="transform: translate(0, 960%)">{{topStreaks8Name}} <br> {{topStreaks8Number}}</p>
+        <p style="transform: translate(0, 960%)">{{topStreaks8Name}} <br> {{topStreaks9Number}}</p>
     </div>
 </div>
 <br>

@@ -8,16 +8,20 @@
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
   </head>
   <body>
-    <ul>
-      <li><a class="active" href="/main/">Home</a></li>
-      <li><a href="/main/profile">Profile </a></li>
-      <! Is it supposed to be superuser or staff they are different>
-      {% if request.user.is_superuser %}
-      <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
-      {% endif %}
-     <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
-       <li style="float:right"><a href="/">Logout </a></li>
-    </ul>
+  <header class="navBar">
+<!-- Logo -->
+        <a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a class="active" href="/main/">Home</a></li>
+                <li><a href="/main/profile">Profile </a></li>
+                {% if request.user.is_superuser %}
+                <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
+                {% endif %}
+                <li style="float:right"><a href="/">Logout </a></li>
+            </ul>
+        </nav>
+</header>
 
     {% if submitted == True %}<p>Form has been submitted </p> <a style="color:#73a47c; font-weight: bold; font-family: 'Courier New'; Font" href="/main/buildingOfTheDay">Submit another one?</a>
     {% elif submitted == False %}

@@ -8,16 +8,21 @@
   <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
 </head>
 <body onload="getLocation">
-<ul>
-  <li><a class="active" href="/main/">Home</a></li>
-  <li><a href="/main/profile">Profile </a></li>
-  {% if request.user.is_superuser %}
-  <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
-  {% endif %}
-  <li class="noHover"><a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a></li>
-  <li style="float:right"><a href="/">Logout </a></li>
-</ul>
 
+<header class="navBar">
+<!-- Logo -->
+        <a class="centerNav"><img class="navLogo" src="{% static 'campus_logo_white.png' %}" alt="CampusBuilder Logo"></a>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a class="active" href="/main/">Home</a></li>
+                <li><a href="/main/profile">Profile </a></li>
+                {% if request.user.is_superuser %}
+                <li><a href="/main/buildingOfTheDay">Building of the day </a></li>
+                {% endif %}
+                <li style="float:right"><a href="/">Logout </a></li>
+            </ul>
+        </nav>
+</header>
 <div class="parent">
   <img src="{% static 'GreenCampus.jpg' %}" alt="Campus" class="map" />
   <img
@@ -39,19 +44,20 @@
 <p>
   Building of the Day!:
   {% for building in building_list %} {% if today == building.date %}
-  {{building.building_name}}, Description: {{building.building_desc}} , Reward:
-  {{building.reward}}<br>{% endif %} {% endfor %}
+  {{building.name}} <br> Description: {{building.description}} <br> Reward:
+  <img style="width:10%;" src=/static/items/{{building.reward}} alt="{{building.reward}}" class="Reward"><br>{% endif %} {% endfor %}
 </p>
 
 <p id="output" class="output">loading...</p>
 
-<p id="mainUsername">{{ user_name }}</p>
 
-<div class="footer">
-  <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a>
-  icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-</div>
-
+<div class = "footer">
+    <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <a style="float:right" href="/main/privacyPolicy">Privacy Policy &nbsp </a>
+     {% if request.user.is_superuser == False %}
+      <a style="float:right" href="/main/reportToAdmin">Report to Admin &nbsp</a>
+     {% endif %}
+ </div>
 
 <script type="text/javascript" src="{% static 'gps_locator.js' %}"></script>
 
