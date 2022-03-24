@@ -2,7 +2,7 @@ h1 {
     margin: auto;
     left: 0;
     right: 0;
-    top: 10%;
+    top: 8%;
     text-align: center;
     display: block;
     z-index: 1;
@@ -191,10 +191,13 @@ noHover a:hover {
 
 }
 
+.profileHeader {
+  -index: 4;
+}
 
 .shedParent img {
-    margin-left: 2%;
-    margin-left: 2%;
+    margin-left: 1%;
+    margin-left: 1%;
     width: 8.5%;
 
 }
