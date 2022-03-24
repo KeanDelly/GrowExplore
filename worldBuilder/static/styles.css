@@ -201,15 +201,15 @@ noHover a:hover {
 
 .shedRow1{
     z-index: 5;
-    transform: translate(0, 525%);
+    transform: translate(0, 465%);
 }
 .shedRow2{
     z-index: 5;
-    transform: translate(0, 525%);
+    transform: translate(0, 465%);
 }
 .shedRow3{
     z-index: 5;
-    transform: translate(0, 525%);
+    transform: translate(0, 465%);
 }
 
 

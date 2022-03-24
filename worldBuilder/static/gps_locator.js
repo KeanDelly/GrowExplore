@@ -3,7 +3,6 @@ const y = document.getElementById("pointer");
 const output = document.getElementById("output");
 
 
-
 //This Data will be moved into config.json
 const latitudeTop = 50.740142;
 const longitudeLeft = -3.538104;

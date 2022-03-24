@@ -48,7 +48,7 @@ def profile(request):
     streaksTuple.append(("Great Hall" ,user.GreatHall_Streak))
     streaksTuple.append(("Hatherly" ,user.Hatherly_Streak))
     streaksTuple.append(("Henry Welcome Building for Biocatalysis" ,user.Henry_Streak))
-    streaksTuple.append(("Innovation One | South West Institute of Technology" ,user.Innovation_One_Streak))
+    streaksTuple.append(("Innovation One | SWIoT" ,user.Innovation_One_Streak))
     streaksTuple.append(("Institute of Arab and Islamic Studies" ,user.Iais_Streak))
     streaksTuple.append(("INTO International Study Centre" ,user.Into_Streak))
     streaksTuple.append(("Laver" ,user.Laver_Streak))

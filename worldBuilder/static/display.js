@@ -87,7 +87,9 @@ setTimeout(function getPlants() {
     //Loading .JSON data for plant type
     for (var i = 0; i<building.length; i++) {
         for (var j = 0; j<getObj().length; j++) {
+            console.log(getObj()[j].name)
             if (building[i].localeCompare(getObj()[j].name) === 0) {
+                //console.log(getObj()[j].name)
                 plantTypes.push(getObj()[j].type)
                 break;
             }
@@ -111,16 +113,16 @@ setTimeout(function getPlants() {
         var plantName = plantTypes[i].concat(level);
         plantName = plantName.concat(".png");
         plantImages.push(plantName);
-        console.log(plantName);
-        console.log(plantImages[i])
     }
 
 
     //Displaying plant images into plant.innerHTML elements
     let preDirectory = "../../static/plants/"
     for (var i=0; i <building.length; i++) {
+        console.log(streakNumber[i])
 
         if (streakNumber[i].localeCompare("0") === 0) {
+
             var directory =  preDirectory.concat("empty.png")
             plantDisplay[i].src = directory;
             plantDisplay[i].style.display = "inline-block";
