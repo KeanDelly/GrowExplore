@@ -104,6 +104,12 @@ noHover a:hover {
     position: relative;
 }
 
+@media only screen and (max-width: 550px) {
+  .navLogo {
+    display: none;
+  }
+}
+
 .centerNav {
    float: none;
     position: absolute;
@@ -113,10 +119,22 @@ noHover a:hover {
     pointer-events: none;
 }
 
-
 .centerNav hover {
     background-color: #ddd;
     color: black;
+}
+
+.mainPageOutput {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.mainPageOutput img {
+    width: 20%;
+    min-width: 150px;
+    border: none;
 }
 
 .checkIn {
@@ -127,6 +145,29 @@ noHover a:hover {
     width: 50%;
     max-width: 250px;
     margin-top: 30px;
+}
+
+
+.slogan{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width:500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.UoELogo{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    max-width: 300px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .shelf{
@@ -155,6 +196,7 @@ noHover a:hover {
     margin-left: 2%;
     margin-left: 2%;
     width: 8.5%;
+
 }
 
 .shedRow1{
@@ -171,8 +213,6 @@ noHover a:hover {
 }
 
 
-
-
 .shed{
 
     position: absolute;
@@ -187,6 +227,7 @@ noHover a:hover {
     margin-right: auto;
     position: relative;
     width: 40%;
+    max-width: 250px;
 }
 
 .footer {
@@ -217,6 +258,7 @@ noHover a:hover {
 }
 
 .profileOutput img {
+    text-align: center;
     width: 14%;
 }
 

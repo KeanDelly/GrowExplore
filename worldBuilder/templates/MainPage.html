@@ -34,16 +34,21 @@
         class="checkIn"
 />
 
-
-
-<p>
+<p class="mainPageOutput">
   Building of the Day!:
   {% for building in building_list %} {% if today == building.date %}
-  {{building.building_name}}, Description: {{building.building_desc}} , Reward:
-  {{building.reward}}<br>{% endif %} {% endfor %}
+  {{building.building_name}}<br> Description: {{building.building_desc}}<br> Reward:
+
+  <img src="../static/items/{{building.reward}}" alt="Campus" class="map" />
+
+
+
+
+  <br>{% endif %} {% endfor %}
 </p>
 
-<p id="output" class="output">loading...</p>
+<p id="output" class="mainPageOutput">loading...</p>
+
 
 
 <div class="footer">
