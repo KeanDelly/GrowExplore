@@ -27,7 +27,5 @@ jobs:
         pip install -r requirements
         with: ADjangoApp/WorldBuilder/requirements.txt
         requirements: requirements.txt
-    - name: Run migrations
-      run: python manage.py migrate
     - name: Run tests
       run: python manage.py test
