@@ -22,10 +22,7 @@ class NewUserForm(UserCreationForm):
 		if commit:
 			user.save()
 		return user
-# class StreakForm(ModelForm):
-#     class Meta:
-#         model = User
-#         fields = ("username", "email")
+
 
 
 
