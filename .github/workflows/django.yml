@@ -8,7 +8,9 @@ on:
 
 jobs:
   build:
-
+    defaults:
+      run:
+        working-directory: ./final_main
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
