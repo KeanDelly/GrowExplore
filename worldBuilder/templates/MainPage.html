@@ -37,7 +37,7 @@
 <p class="mainPageOutput">
   Building of the Day!:
   {% for building in building_list %} {% if today == building.date %}
-  {{building.building_name}}<br> Description: {{building.building_desc}}<br> Reward:
+  {{building.name}}<br> Description: {{building.description}}<br> Reward:
 
   <img src="../static/items/{{building.reward}}" alt="Campus" class="map" />
 
