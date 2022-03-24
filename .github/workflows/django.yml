@@ -2,9 +2,9 @@ name: Django CI
 
 on:
   push:
-    branches: '*'
+    branches: [ 'final_main' ]
   pull_request:
-    branches: '*'
+    branches: [ 'final_main' ]
 
 jobs:
   build:
