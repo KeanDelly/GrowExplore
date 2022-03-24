@@ -55,8 +55,28 @@
         <p style="transform: translate(0, 960%)" id="text9">{{topStreaks9Name}}<br>{{topStreaks9Number}}</p>
     </div>
 </div>
+
 <br>
- <img src="{% static 'shed.png' %}"  alt="shed" class= shed>
+
+<div class="shedParent">
+
+    <img id="reward1" class="shedRow1" src="../../static/items/{{buildingReward1}}"  alt="shed">
+    <img id="reward2" class="shedRow1" src="../../static/items/{{buildingReward2}}"  alt="shed">
+    <br>
+    <img id="reward3" class="shedRow2" src="../../static/items/{{buildingReward3}}"  alt="shed">
+    <img id="reward4" class="shedRow2" src="../../static/items/{{buildingReward4}}"  alt="shed">
+    <br>
+    <img id="reward5" class="shedRow3" src="../../static/items/{{buildingReward5}}"  alt="shed">
+    <img id="reward6" class="shedRow3" src="../../static/items/{{buildingReward6}}"  alt="shed">
+
+
+</div>
+
+<img class="shed" src="{% static 'shed.png' %}"  alt="shed">
+
+
+
+
 
 <div class = "footer">
     <a target="_blank" href="https://icons8.com/icon/19190/potted-plant">Potted Plant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
@@ -65,6 +85,7 @@
       <a style="float:right" href="/main/reportToAdmin">Report to Admin</a>
      {% endif %}
 </div>
+
 
 <script src="{% static 'display.js' %}"></script>
 </body>

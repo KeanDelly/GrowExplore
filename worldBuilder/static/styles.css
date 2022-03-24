@@ -138,13 +138,47 @@ noHover a:hover {
     margin-top: 1px;
 }
 
-.shed{
-     display: block;
+
+.shedParent{
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-     position: relative;
-     margin: 200px auto;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    z-index: 4;
+
+}
+
+
+.shedParent img {
+    margin-left: 2%;
+    margin-left: 2%;
+    width: 8.5%;
+}
+
+.shedRow1{
+    z-index: 5;
+    transform: translate(0, 525%);
+}
+.shedRow2{
+    z-index: 5;
+    transform: translate(0, 525%);
+}
+.shedRow3{
+    z-index: 5;
+    transform: translate(0, 525%);
+}
+
+
+
+
+.shed{
+
+    position: absolute;
+    width: 50%;
+    transform: translate(50%, 55%);
+    z-index: 1;
 }
 
 .login {
@@ -165,9 +199,11 @@ noHover a:hover {
     font-family: 'Courier New';
     text-align: left;
     font-size: 15px;
+    z-index: 5;
 }
 .shelfParent {
     position: absolute;
+
 }
 
 .profileDisplay {

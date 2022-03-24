@@ -68,7 +68,8 @@ function showPosition(position) {
     let currentLongitude = position.coords.longitude;
 
     //Harrison Building coordinates, Use this space to test different locations remotely
-    //
+    currentLatitude = 50.7373512;
+    currentLongitude = -3.5326224;
 
 
     if ((currentLatitude<latitudeTop && currentLatitude>latitudeBot) //Checks if player coords are within campus
@@ -133,10 +134,6 @@ function showPosition(position) {
         }else {
             output.innerHTML = "You are near " + outputText
 
-
-
-
-
         }
 
     } else { //Current coordinates are outside the bounds of the campus coordinates
@@ -145,9 +142,7 @@ function showPosition(position) {
         console.log ("The player is outside the university")
         output.innerHTML = "You are outside the university";
 
-
     }
-
 
 }
 
@@ -155,9 +150,6 @@ function showPosition(position) {
 function triggerPython() {
     let buildingName = document.getElementById('output').textContent;
     buildingName = buildingName.substring(14)
-
-
-
 
     var outputThis = "../simple_function?" + buildingName
 

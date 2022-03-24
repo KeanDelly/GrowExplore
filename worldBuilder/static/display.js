@@ -28,10 +28,17 @@ textReplace7 = document.getElementById('text7')
 textReplace8 = document.getElementById('text8')
 textReplace9 = document.getElementById('text9')
 
+reward1 = document.getElementById('reward1')
+reward2 = document.getElementById('reward2')
+reward3 = document.getElementById('reward3')
+reward4 = document.getElementById('reward4')
+reward5 = document.getElementById('reward5')
+reward6 = document.getElementById('reward6')
 
 var textReplace = [textReplace1,textReplace2,textReplace3,textReplace4,textReplace5,textReplace6,textReplace7,textReplace8,textReplace9]
 var textOutputs = [text1,text2,text3,text4,text5,text6,text7,text8,text9]
 var plantDisplay = [plant1,plant2,plant3,plant4,plant5,plant6,plant7,plant8,plant9]
+var rewards = [reward1,reward2,reward3,reward4,reward5,reward6]
 
 building = []
 streakNumber = []
@@ -50,6 +57,7 @@ let getObj = function() {
     }
 }
 
+
 fetch("../../static/config.json") //Loads JSON data into JavaScript program
     .then(function(resp) {
         return resp.json();
@@ -58,8 +66,6 @@ fetch("../../static/config.json") //Loads JSON data into JavaScript program
         mainObj = data;
         console.log(data)
     });
-
-
 
 
 setTimeout(function getPlants() {
@@ -110,9 +116,6 @@ setTimeout(function getPlants() {
     }
 
 
-
-    console.log(plantTypes)
-
     //Displaying plant images into plant.innerHTML elements
     let preDirectory = "../../static/plants/"
     for (var i=0; i <building.length; i++) {
@@ -128,9 +131,16 @@ setTimeout(function getPlants() {
             plantDisplay[i].style.display = "inline-block";
 
         }
-
     }
 
+    //DISPLAYING REWARDS
 
+    for (var i=0; i<rewards.length; i++) {
+        console.log(rewards[i].src.slice(-3))
+        if (rewards[i].src.slice(-3).localeCompare("png") != 0){
+            console.log("remove")
+            rewards[i].style.display = "none"
+        }
+    }
 
 }, 200);
