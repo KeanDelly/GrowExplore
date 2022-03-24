@@ -54,6 +54,7 @@ The web app server will now be running at the location: ```http://127.0.0.1:8000
 
 which can be copy pasted into any preferred web browser
 
+[![Set up, Migration and Testing](https://github.com/KeanDelly/ADjangoApp/actions/workflows/django.yml/badge.svg)](https://github.com/KeanDelly/ADjangoApp/actions/workflows/django.yml)
 
 ## Concept:
 
