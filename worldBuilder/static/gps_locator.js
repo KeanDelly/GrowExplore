@@ -68,9 +68,8 @@ function showPosition(position) {
     let currentLongitude = position.coords.longitude;
 
     //Harrison Building coordinates, Use this space to test different locations remotely
-    currentLatitude = 50.7373512;
-    currentLongitude = -3.5326224;
-
+    //currentLatitude = 50.7373512;
+    //currentLongitude = -3.5326224;
 
     if ((currentLatitude<latitudeTop && currentLatitude>latitudeBot) //Checks if player coords are within campus
         && (currentLongitude>longitudeLeft && currentLongitude<longitudeRight)) {
