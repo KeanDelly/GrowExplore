@@ -27,7 +27,9 @@
 
 ```(env) $ python -m pip install Django``` 
 
-This command fetches the django package from the Python Package Index (PyPI) using pip.
+```(env) $ python -m pip install Pillow``` 
+
+These commands fetche the django and Pillow packages from the Python Package Index (PyPI) using pip.
 
 Using shell to navigate to the directory containing the `manage.py` file. We can then use the following command to run the app server
 
