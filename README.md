@@ -9,6 +9,14 @@
 5) Dean Kelly 
 6) Vidip Khattar
 
+## Mobile Deployment
+
+This Application is available using Google Cloud web deployment at:
+
+[https://exebuildergame2.nw.r.appspot.com/main/]
+
+Alternatively, the pocess below describes how to run this application locally on your laptop.
+
 ## Prerequisites
 
 1. Setting up Environment
