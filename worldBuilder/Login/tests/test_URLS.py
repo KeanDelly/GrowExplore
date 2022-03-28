@@ -14,7 +14,7 @@ class URLTests(TestCase):
         self.assertEqual(response.status_code, 200)
         response = self.client.get('/password_reset_sent/') ## gets a response from the server and stores it
         self.assertEqual(response.status_code, 200)
-        response = self.client.get('/password_reset_complete/') ## gets a response from the server and stores it
+        response = self.client.get('/reset/done/') ## gets a response from the server and stores it
         self.assertEqual(response.status_code, 200)
 
 ## this will test that the URL is all set up and you get the correct response when you ping the server
