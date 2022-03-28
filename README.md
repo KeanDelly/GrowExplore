@@ -13,7 +13,7 @@
 
 This Application is available using Google Cloud web deployment at:
 
-[https://exebuildergame2.nw.r.appspot.com]
+https://exebuildergame2.nw.r.appspot.com
 
 Alternatively, the pocess below describes how to run this application locally on your laptop.
 
