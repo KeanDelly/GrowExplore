@@ -72,7 +72,7 @@ We wanted to create an app that would allow our users to engage with the layout 
 
 The primary aim of the game is to build streaks, which can be achieved by visiting more buildings in the university consecutively. These streaks are shown as plants that grow over time as the streak increases. Each building has a different plant associated with it so you can grow your virtual garden by checking in. There are collectables, such as gnomes or watering cans, set by the game keepers for building of the day which can help publicise events in that location and encourage exploration outside the buildings related to the degree.
 
-To achieve this we have created a Campus Builder app. In its current prototype form and contains key functionality. The app has decided Garden/Wildlife theme, this will bring all the pages together and give the app a cottage core like aesthetic. This was chosen by showing it to potential users and seeing it had a very positive reaction. We have attempted to make the theme Dyslexia friendly and accessible using colours, which work with screen filters, and fonts.
+To achieve this we have created a Campus Builder app.The app has decided Garden/Wildlife theme, this will bring all the pages together and give the app a cottage core like aesthetic. This was chosen by showing it to potential users and seeing it had a very positive reaction. We have attempted to make the theme Dyslexia friendly and accessible using colours, which work with screen filters, and fonts.
 
 ## Walkthrough:
 
