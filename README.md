@@ -52,9 +52,7 @@ Quit the server with CONTROL-C.
 ```
 The web app server will now be running at the location: ```http://127.0.0.1:8000/```
 
-which can be copy pasted into any preferred web browser
-
-[![CI](https://github.com/KeanDelly/ADjangoApp/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/KeanDelly/ADjangoApp/actions/workflows/main.yml)
+which can be copy pasted into any preferred web browser.
 
 ## Concept:
 
