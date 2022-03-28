@@ -36,6 +36,6 @@ class TestViews(TestCase):
            self.assertTemplateUsed(response, 'password_reset_done.html')
     def test_register_GET(self):
            client = Client()
-           response = client.get('/password_reset_complete/')
+           response = client.get('/reset/done/')
            self.assertEquals(response.status_code, 200)
            self.assertTemplateUsed(response, 'password_reset_complete.html')
