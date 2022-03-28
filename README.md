@@ -54,6 +54,8 @@ The web app server will now be running at the location: ```http://127.0.0.1:8000
 
 which can be copy pasted into any preferred web browser.
 
+[![Django CI](https://github.com/KeanDelly/ADjangoApp/actions/workflows/django.yml/badge.svg)](https://github.com/KeanDelly/ADjangoApp/actions/workflows/django.yml)
+
 ## Concept:
 
 We wanted to create an app that would allow our users to engage with the layout and terrain of Exeter University campus as well as the buildings that make up our University without requiring large amounts of time interacting with their phone. 
