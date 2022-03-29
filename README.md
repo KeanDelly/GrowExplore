@@ -3,7 +3,7 @@
 ## Group Members 
 
 1) Ursula Mennar
-2) Jan Orman
+2) Can Orman
 3) Katie Hopkins
 4) Sam Judges
 5) Dean Kelly 
