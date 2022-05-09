@@ -7,7 +7,6 @@
 3) Katie Hopkins
 4) Sam Judges
 5) Dean Kelly 
-6) Vidip Khattar
 
 ## Mobile Deployment
 
